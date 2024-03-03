@@ -1,50 +1,68 @@
 import React from 'react'
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import Logo from "../assets/Logo.png"
 import { IoMenu } from "react-icons/io5";
 import { FaTimes } from "react-icons/fa";
+import { BiPhoneCall } from "react-icons/bi";
+
 
 function Header() {
   const [menuBtn, setMenuBtn] = React.useState(false)
   const list = [
     {
       id:1,
-      name: "Nos Services",
+      name: "Résidentiel",
       location: "/service"
     },
     {
       id:2,
-      name: "Chauffe-Eau",
+      name: "Commercial",
       location: "/ChauffeEau"
     },
     {
       id:3,
-      name: "Contactez-Nous",
+      name: "Industriel",
       location: "/contact"
     },
     {
       id:4,
-      name: "En"
+      name: "Nous-Contactez",
+      location: "/"
+
     }
   ]
 
   const activeStyles = {
-    textDecoration: "underline"
+    textDecoration: "underline",
+    color: "#1894edff"
 }
 
   
   return (
-    <>
-      <header className="h-28 p-3 w-full flex items-center justify-between bg-[#4bdbc1ff]">
-        <img src={Logo} alt="logo" className="w-32 rounded-lg max-sm:w-24 z-10"/>
+    <>  
+
+      <div className="w-full h-20 bg-[#4fb6ff] flex items-center justify-around text-white">
+        <div className="flex items-center w-[370px] justify-around"> 
+          <p className="flex items-center"> <BiPhoneCall size={22}/> Urgence plomberie?</p> 
+          <p> 24/7 -</p>
+          <p><a className="underline"href="tel:#">(123) 456-7890</a></p>
+        </div>
+      </div>
+      
+      <header className="h-28 p-3 w-full flex items-center justify-between bg-[#ffffff]">
+        <Link
+        to="/"
+        >
+          <img src={Logo} alt="logo" className="w-36 rounded-lg max-sm:w-28 z-10"/>
+        </Link>
         
         <nav className="w-[600px] max-sm:hidden h-20 flex items-center">
-          <ul className="h-14 w-full flex items-center justify-around text-white">
+          <ul className="h-14 w-full flex items-center justify-around text-black text-lg">
             {
               list.map((item,index)=> (
                 <NavLink 
                   to = {item.location}
-                  className= {`${item.style} cursor-pointer`} 
+                  className= {`${item.style} cursor-pointer hover:underline hover:text-[#1894edff]`} 
                   key={index}
                   style={({ isActive }) => isActive ? activeStyles : null}
                 >
@@ -57,11 +75,11 @@ function Header() {
         {
           menuBtn === false ?
           <IoMenu  
-            className="text-[45px] sm:hidden text-white"
+            className="text-[45px] sm:hidden text-[#126DAF]"
             onClick={() => setMenuBtn(!menuBtn)}
           />
           :
-          <FaTimes className="text-[35px] sm:hidden text-white z-10"
+          <FaTimes className={`text-[35px] sm:hidden ${menuBtn ? "text-white" : ""} z-10`}
           onClick={() => setMenuBtn(!menuBtn)}
           />
         }
@@ -69,7 +87,7 @@ function Header() {
       
         {
           menuBtn && ( 
-            <ul className={"flex flex-col text-white text-xl py-40 justify-around items-center absolute top-0 left-0 w-full h-screen bg-[#4bdbc1ff]"}>
+            <ul className={"flex flex-col text-white text-xl font-medium py-40 justify-around items-center absolute top-0 left-0 w-full h-screen bg-[#4fb6ff] z-9"}>
               {
                 list.map((item,index)=> (
                   <NavLink 
