@@ -3,23 +3,23 @@ import { Outlet,NavLink } from "react-router-dom"
 
 
 
-function Services() {
+function ServicesResi() {
     const services = [
         {
-            name:"Debouchage",
-            location: "/service"
+            name:"Service 1",
+            location: "/service-comm"
         },
         {
             name:"ChauffeEau",
-            location: "service2"
+            location: "2"
         },
         {
             name:"Inspection",
-            location: "service3"
+            location: "3"
         },
         {
             name:"Urgence",
-            location: "service4"
+            location: "4"
         }
     ]
     const activeStyles = {
@@ -27,14 +27,14 @@ function Services() {
         
     }
   return (
-    <div className="h-full w-full text-sm text-white text-500 font-medium">
+    <div className="h-full w-full max-w-[1400px] mx-auto text-sm text-white text-500 font-medium">
         <div className="w-full h-18 bg-[#1894edff] flex items-center">
             <ul className= "w-full flex justify-around">
                 {
                     services.map((item,index)=>(
                         <NavLink 
                         key = {index}
-                        className="cursor-pointer hover:bg-[#126DAF] p-4 w-full h-full text-center"
+                        className="cursor-pointer hover:bg-[#126DAF] p-4 w-full h-full text-center text-xs md:text-base"
                         style={({ isActive }) => isActive ? activeStyles : null}
                         to={item.location}
                         end
@@ -50,4 +50,4 @@ function Services() {
   )
 }
 
-export default Services
+export default ServicesResi

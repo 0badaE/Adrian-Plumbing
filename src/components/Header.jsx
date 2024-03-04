@@ -12,22 +12,22 @@ function Header() {
     {
       id:1,
       name: "Résidentiel",
-      location: "/service"
+      location: "/service-resi"
     },
     {
       id:2,
       name: "Commercial",
-      location: "/ChauffeEau"
+      location: "/service-comm"
     },
     {
       id:3,
       name: "Industriel",
-      location: "/contact"
+      location: "/service-ind"
     },
     {
       id:4,
       name: "Nous-Contactez",
-      location: "/"
+      location: "/contact"
 
     }
   ]
@@ -41,15 +41,15 @@ function Header() {
   return (
     <>  
 
-      <div className="w-full h-20 bg-[#4fb6ff] flex items-center justify-around text-white">
-        <div className="flex items-center w-[370px] justify-around"> 
+      <div className="w-screen h-12 bg-[#f82525] flex items-center justify-around text-white">
+        <div className="flex items-center text-xs w-[285px] md:text-base md:w-[370px] justify-around"> 
           <p className="flex items-center"> <BiPhoneCall size={22}/> Urgence plomberie?</p> 
           <p> 24/7 -</p>
           <p><a className="underline"href="tel:#">(123) 456-7890</a></p>
         </div>
       </div>
       
-      <header className="h-28 p-3 w-full flex items-center justify-between bg-[#ffffff]">
+      <header className="h-28 p-3 w-screen max-w-[1400px] mx-auto flex items-center justify-between bg-[#ffffff]">
         <Link
         to="/"
         >

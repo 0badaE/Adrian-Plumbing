@@ -6,12 +6,13 @@ import {
   Route
 } from "react-router-dom"
 import Layout from "./components/Layout"
-import Services from "./components/Services"
-import Service1 from "./pages/Service1"
-import Service2 from "./pages/Service2"
-import Service3 from "./pages/Service3"
-import Service4 from "./pages/Service4"
-import ChauffeEau from "./pages/ChauffeEau"
+import ServicesResi from "./components/ServicesResi"
+import ServicesComm from "./components/ServicesComm"
+import Debouchage from "./pages/ServiceResi/Debouchage"
+import Service2 from "./pages/ServiceResi/Service2"
+import Service3 from "./pages/ServiceResi/Service3"
+import Service4 from "./pages/ServiceResi/Service4"
+import Commercial from "./pages/ServiceComm/Commercial"
 import Contact from "./pages/Contact"
 import HomePage from "./pages/HomePage"
 
@@ -21,13 +22,21 @@ function App() {
     <>
       <Route path="/" element={<Layout/>}>
         <Route index element={<HomePage/>}/>
-        <Route path="service" element={<Services/>}>
-          <Route index element={<Service1/>}/>
-          <Route path="service2" element={<Service2/>}/>
-          <Route path="service3" element={<Service3/>}/>
-          <Route path="service4" element={<Service4/>}/>
+        <Route path="service-resi" element={<ServicesResi/>}>
+          <Route index element={<Debouchage/>}/>
+          <Route path="2" element={<Service2/>}/>
+          <Route path="3" element={<Service3/>}/>
+          <Route path="4" element={<Service4/>}/>
         </Route>
-        <Route path="chauffeEau" element={<ChauffeEau/>}/>
+        
+        <Route path="service-comm" element={<ServicesComm/>}>
+          
+
+        </Route>
+        {/* <Route path="service-ind" element={<{}/>}>
+
+        </Route> */}
+
         <Route path="contact" element={<Contact/>}/>
       </Route>
     </>
