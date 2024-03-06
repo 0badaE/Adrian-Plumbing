@@ -15,6 +15,7 @@ import Service4 from "./pages/ServiceResi/Service4"
 import Commercial from "./pages/ServiceComm/Commercial"
 import Contact from "./pages/Contact"
 import HomePage from "./pages/HomePage"
+import Services from "./pages/Services"
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
     <>
       <Route path="/" element={<Layout/>}>
         <Route index element={<HomePage/>}/>
+        <Route path="services" element={<Services/>}/>
+        <Route path="contact" element={<Contact/>}/>
         <Route path="service-resi" element={<ServicesResi/>}>
           <Route index element={<Debouchage/>}/>
           <Route path="2" element={<Service2/>}/>
@@ -36,8 +39,9 @@ function App() {
         {/* <Route path="service-ind" element={<{}/>}>
 
         </Route> */}
+        
 
-        <Route path="contact" element={<Contact/>}/>
+        
       </Route>
     </>
   ))

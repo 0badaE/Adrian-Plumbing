@@ -5,30 +5,32 @@ import { Outlet,NavLink } from "react-router-dom"
 
 function ServicesResi() {
     const services = [
-        {
-            name:"Debouchage",
-            location: "/service-resi"
-        },
-        {
-            name:"ChauffeEau",
-            location: "2"
-        },
-        {
-            name:"Inspection",
-            location: "3"
-        },
-        {
-            name:"Urgence",
-            location: "4"
-        }
+    {
+        name:"Debouchage",
+        location: "/service-resi"
+    },
+    {
+        name:"ChauffeEau",
+        location: "2"
+    },
+    {
+        name:"Inspection",
+        location: "3"
+    },
+    {
+        name:"Urgence",
+        location: "4"
+    }
     ]
+
+
     const activeStyles = {
         backgroundColor: "#126DAF",
         
     }
   return (
-    <div className="h-full w-full max-w-[1400px] mx-auto text-sm text-white text-500 font-medium">
-        <div className="w-full h-18 bg-[#1894edff] flex items-center">
+    <div className="h-full w-full max-w-[1000px] mx-auto text-sm text-white text-500 font-medium overflow-y-scroll no-scrollbar">
+        <div className="w-full h-18 bg-[#1894edff] flex items-center overflow-x-auto">
             <ul className= "w-full flex justify-around">
                 {
                     services.map((item,index)=>(

@@ -27,7 +27,7 @@ function ServicesResi() {
         
     }
   return (
-    <div className="h-full w-full max-w-[1400px] mx-auto text-sm text-white text-500 font-medium">
+    <div className="h-full w-full max-w-[1000px] mx-auto text-sm text-white text-500 font-medium">
         <div className="w-full h-18 bg-[#1894edff] flex items-center">
             <ul className= "w-full flex justify-around">
                 {

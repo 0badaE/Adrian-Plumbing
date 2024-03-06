@@ -49,7 +49,7 @@ function Header() {
         </div>
       </div>
       
-      <header className="h-28 p-3 w-screen max-w-[1400px] mx-auto flex items-center justify-between bg-[#ffffff]">
+      <header className="h-28 p-3 w-screen max-w-[1000px] mx-auto flex items-center justify-between bg-[#ffffff]">
         <Link
         to="/"
         >
