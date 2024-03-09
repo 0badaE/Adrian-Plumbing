@@ -31,13 +31,13 @@ function HomePage() {
             <div className="w-full h-[100px] md:h-[80px] flex justify-around items-center text-white lg:mt-8 lg:px-10">
               <Link 
               to="contact"
-              className="w-[160px] text-center p-3 md:p-2 lg:p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6]"
+              className="w-[160px] text-center p-3 md:p-2 lg:p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
               >
                 Contactez-Nous
               </Link>
               <Link 
               to="/services"
-              className="w-[160px] text-center p-3 md:p-2 lg:p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6]"
+              className="w-[160px] text-center p-3 md:p-2 lg:p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
               >
                 Nos Services
               </Link>

@@ -1,11 +1,28 @@
 import React from 'react'
+import { MdOutlineMail } from "react-icons/md";
+
 
 function Contact() {
   return (
-    <div className="text-black w-full h-full p-6 max-w-[1000px] m-auto sm:w-full">
-    <h1 className="text-2xl font-semibold mb-6">Contact</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aspernatur vitae omnis, nobis rem ea. Voluptatum, officiis ex! Inventore cupiditate placeat, unde porro non beatae dolores voluptates. Veniam, nisi quaerat!</p>
+    <div className="text-black w-full max-w-[1000px] m-auto sm:w-full no-scrollbar overflow-y-scroll">
+    <div className="flex flex-col px-4 justify-center mx-auto">
+         <div className="py-2 mb-5">
+            <p className="text-3xl font-bold inline border-b-4 border-[#4492C6] ">Contactez-Nous</p>
+            <p className="py-6 text-black">Vous pouvez nous appeler au <a className="underline font-bold text-[#4492C6]" href="tel:1234567890">(123) 456-7890</a></p>
+            <p>Ou soumettre le formulaire ci-dessous pour nous envoyer un courriel!</p>
+          </div>
+
+          <div className="flex justify-center items-center">
+            <form action="###" method="POST" className="flex flex-col w-full md:w-1/2" >
+              <input type="text" name="name" placeholder="Votre Nom" className="p-2 bg-transparent border-2 border-gray-700 rounded-md text-black focus:outline-none" />
+              <input type="text" name="email" placeholder="Votre Courriel" className="p-2 bg-transparent border-2 border-gray-700 rounded-md text-black focus:outline-none my-4" />
+              <textarea name="message" placeholder="Votre Message" rows="10" className="p-2 bg-transparent border-2 border-gray-700 rounded-md text-black focus:outline-none"></textarea>
+              <button className="text-white bg-[#4fb6ffff] px-3 py-5 my-8 mx-auto flex items-center w-28 h-8 justify-around rounded-md hover:bg-[#4492C6] duration-300"><span><MdOutlineMail /></span> <p>Envoyer</p></button>
+            </form>
+          </div>
+      </div>
   </div>
+
   )
 }
 
