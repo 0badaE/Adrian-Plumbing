@@ -1,34 +1,58 @@
 import React from 'react'
-import { NavLink, Link } from "react-router-dom"
+import { NavLink, Link, useNavigate } from "react-router-dom"
 import Logo from "../assets/Logo.png"
 import { IoMenu } from "react-icons/io5";
 import { FaTimes } from "react-icons/fa";
 import { BiPhoneCall } from "react-icons/bi";
+import { IoIosArrowDown } from "react-icons/io";
+
 
 
 function Header() {
   const [menuBtn, setMenuBtn] = React.useState(false)
+  const [hoveredItem, setHoveredItem] = React.useState(null);
+  const [submenu, setSubmenu] = React.useState(null);
+  const navigate = useNavigate();
+  
   const list = [
     {
       id:1,
-      name: "Résidentiel",
-      location: "/service-resi"
+      name: "À Propos",
+      location: "/about"
     },
     {
       id:2,
-      name: "Commercial",
-      location: "/service-comm"
+      name: "Résidentiel",
+      location: "/service-resi",
+      submenu : [
+        "Réparation", 
+        "Vérification",
+        "Rénovation ",
+        "Tuyauteries", 
+        "Inspection", 
+        "Installation",
+        "Debouchage",
+      ]
     },
+    
     {
       id:3,
-      name: "Industriel",
-      location: "/service-ind"
+      name: "Professionnel",
+      location: "/1",
+      submenu : [
+        "Réparation", 
+        "Vérification",
+        "Rénovation ",
+        "Tuyauteries", 
+        "Inspection", 
+        "Installation",
+        "Debouchage",
+      ]
     },
     {
       id:4,
       name: "Nous-Contactez",
       location: "/contact"
-
     }
   ]
 
@@ -36,50 +60,78 @@ function Header() {
     textDecoration: "underline",
     color: "#1894edff"
 }
-
   
   return (
     <>  
 
-      <div className="w-screen h-12 bg-[#f82525] flex items-center justify-around text-white">
-        <div className="flex items-center text-xs w-[285px] md:text-base md:w-[370px] justify-around"> 
-          <p className="flex items-center"> <BiPhoneCall size={22}/> Urgence plomberie?</p> 
-          <p> 24/7 -</p>
-          <p><a className="underline"href="tel:#">(123) 456-7890</a></p>
+      <div className="w-screen h-12 bg-[#126DAF] flex items-center justify-around text-white">
+        <div className="flex items-center text-xs w-full max-w-[1000px] md:text-base justify-between px-3"> 
+        <div className="flex">
+          <p className="flex items-center"> <BiPhoneCall size={18}/>&#160;Urgence Plomberie? &#160;24/7 -&#160; <a className="underline"href="tel:#">(123) 456-7890</a></p>
+        </div>
+          <button
+          className="text-lg font-semibold"
+          onClick={()=>console.log("English was clicked!")}
+          >
+          Eng
+          </button>
         </div>
       </div>
       
-      <header className="h-28 p-3 w-screen max-w-[1000px] mx-auto flex items-center justify-between bg-[#ffffff]">
+      <header className="h-28 p-3 w-screen max-w-[1000px] mx-auto flex items-center justify-between bg-white  overflow-visible relative z-9">
         <Link
         to="/"
         >
-          <img src={Logo} alt="logo" className="w-36 rounded-lg max-sm:w-28 z-10"/>
+          <img src={Logo} alt="logo" className="w-36 rounded-lg max-sm:w-28"/>
         </Link>
         
         <nav className="w-[600px] max-sm:hidden h-20 flex items-center">
           <ul className="h-14 w-full flex items-center justify-around text-black text-lg">
-            {
-              list.map((item,index)=> (
-                <NavLink 
-                  to = {item.location}
-                  className= {`${item.style} cursor-pointer hover:underline hover:text-[#1894edff]`} 
-                  key={index}
+            {list.map((item, index) => (
+              <div
+               key={index}
+               className="relative"
+               onMouseEnter={() => setHoveredItem(item.id)}
+               onMouseLeave={() => setHoveredItem(null)}
+              >
+                <NavLink
+                  to={item.location}
+                  className="cursor-pointer hover:underline hover:text-[#1894edff]"
                   style={({ isActive }) => isActive ? activeStyles : null}
                 >
-                  {item.name}
+                  <span className="flex items-center">
+                  {item.name} {item.submenu && <IoIosArrowDown size={12} className={`${item.id === hoveredItem && "rotate-180"}`}/>}
+                  </span>
+
                 </NavLink>
-              ))
-            }  
+                {
+                  item.submenu && item.id === hoveredItem && (
+                    <div
+                      className="absolute flex flex-col top-full bg-white p-4 w-[200px] justify-around space-y-3.5 rounded-lg border border-black"
+                    >
+                      {item.submenu.map((subItem,index) => (
+                        <NavLink 
+                          className="hover:text-[#1894edff] hover:rounded hover:bg-gray-200 p-1"
+                          key={subItem} 
+                          to={`/${subItem}`}
+                        >
+                          {subItem}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
           </ul>
         </nav>
         {
           menuBtn === false ?
           <IoMenu  
-            className="text-[45px] sm:hidden text-[#126DAF]"
+            className="text-[45px] sm:hidden text-[#126DAF] cursor-pointer"
             onClick={() => setMenuBtn(!menuBtn)}
           />
           :
-          <FaTimes className={`text-[35px] sm:hidden ${menuBtn ? "text-white" : ""} z-10`}
+          <FaTimes className={`text-[35px] sm:hidden ${menuBtn && "text-white"} cursor-pointer z-10`}
           onClick={() => setMenuBtn(!menuBtn)}
           />
         }
@@ -87,18 +139,50 @@ function Header() {
       
         {
           menuBtn && ( 
-            <ul className={"flex flex-col text-white text-xl font-medium py-40 justify-around items-center absolute top-0 left-0 w-full h-screen bg-[#4fb6ff] z-9"}>
+            <ul className={"flex flex-col text-white text-xl font-medium py-40 justify-around items-center absolute h-screen w-full bg-[#4fb6ff] z-9"}>
               {
                 list.map((item,index)=> (
-                  <NavLink 
-                  to = {item.location}
-                  className= {item.style} 
-                  key={index}
-                  onClick={()=>setMenuBtn(false)}
+                <div
+                  key = {index}
+                  onClick={()=>setSubmenu(item.id === submenu ? null : item.id)}
                 >
-                  {item.name}
-                </NavLink>
-                ))
+                  <p 
+                    className="my-4 text-2xl"
+                    key={index}
+                    onClick={()=>{
+                      if(item.submenu === undefined){
+                        navigate(`${item.location}`)
+                        setMenuBtn(false)
+                      }}}
+                  >
+
+                    <span className={`flex items-center cursor-pointer ${item.submenu && "underline underline-offset-4"}`}>
+                      {item.name} {item.submenu && <IoIosArrowDown size={12} className={`${item.id === submenu && "rotate-180"}`}/>}
+                    </span>
+                  </p>
+                    {
+                      item.submenu && item.id === submenu && (
+                      <div
+                        className="text-white flex flex-col w-[130px] justify-around"
+                      >
+                      {item.submenu.map((subItem) => (
+                        <div>
+                          <NavLink 
+                          className="flex pl-6 py-3"
+                          key={subItem} 
+                          to={`/${subItem}`}
+                        >
+                          {subItem}
+                        </NavLink>
+                        </div>
+                      ))}
+                      
+                    </div>
+                    )}
+                  
+                </div>
+              ))
+                
               }  
             </ul>
           )

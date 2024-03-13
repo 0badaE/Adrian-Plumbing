@@ -1,56 +1,100 @@
 import React from 'react'
+import plumbing from "../assets/plumbing.jpg"
+import { FaCheck } from "react-icons/fa"
+import home from "../assets/residentiel.png"
+import industrial from "../assets/industrielle.png"
+import commercial from "../assets/commercial.png"
+
 
 function Services() {
-  const residentiel = [
-    "Service 1",
-    "Service 2",
-    "Service 3",
+  const services = [
+    {
+      title: "Residentiel",
+      photo: home,
+      service: [
+        "Réparation",
+        "Chauffage d'eau",
+        "Construction",
+        "Vérification",
+        "Rénovation ",
+        "Tuyauteries", 
+        "Inspection", 
+        "Installation",
+        "Débouchage", 
+        "Installation",
+        "Évaluation",
+        "Fuite d’eau",
+        "Service Frigo",
+        "Service Robinet",
+        "Pompe submersible",
+        "et Plus!"
+      ]
+    },
+    {
+      title: "Commercial",
+      photo: industrial,
+      service: [
+        "Service 1",
+        "Service 2",
+        "Service 3",
+        "et Plus!"
+      ]
+    },
+    {
+      title: "Industrielle",
+      photo: commercial,
+      service: [
+        "Service 1",
+        "Service 2",
+        "Service 3",
+        "et Plus!"
+      ]
+    },
   ]
-  const commercial = [
-    "Service 1",
-    "Service 2",
-    "Service 3",
-  ]
-  const industrielle = [
-    "Service 1",
-    "Service 2",
-    "Service 3",
-  ]
-
+  
   return (
-    <div className="text-black w-full h-full p-6 max-w-[1000px] m-auto sm:w-full border-2 border-red-500 overflow-y-scroll no-scrollbar">
-    <div>
-      <p className="text-3xl font-bold inline border-b-4 border-[#4492C6]">Nos Services</p>
+    <div className="text-black w-full h-full p-6 max-w-[1000px] m-auto sm:w-full overflow-y-scroll no-scrollbar">
       
-      <div className="flex flex-col md:flex-row border-2 justify-around border-black mt-8">
-        <div className="border-2 w-full border-black">
-          <p className="text-center font-semibold">Residentiel</p>
-          <div className="px-6 flex flex-col">
-            {residentiel.map((item,index)=>(
-              <p className="mb-1">&#8226; {item}</p>
-            ))}
-          </div>
-        </div>
-        <div className="border-2 w-full border-black">
-          <p className="text-center font-semibold">Industrielle</p>
-          <div className="px-6 flex flex-col">
-            {commercial.map((item,index)=>(
-              <p className="mb-1">&#8226; {item}</p>
-            ))}
-          </div>
-        </div>
-        <div className="border-2 w-full border-black">
-          <p className="text-center font-semibold">Commercial</p>
-          <div className="px-6 flex flex-col">
-            {industrielle.map((item,index)=>(
-              <p className="mb-1">&#8226; {item}</p>
-            ))}
-          </div>
-        </div>
+      <img 
+        src={plumbing} 
+        alt="plumbing"
+      />
+
+      <div className="flex flex-col md:flex-row justify-around mt-8 ">
+          {
+            services.map((item,index) => (
+              <div 
+              key = {index}
+              className="w-full rounded-lg sm:rounded-none p-2 my-4 bg-[#f4f8fa]">
+                <h1 
+                  className="text-center text-2xl font-semibold flex items-center justify-center mb-2">
+                    {item.title} &#160;
+                    <img 
+                      src={item.photo} 
+                      alt="home" 
+                      className="w-8"
+                    />
+                </h1>
+                <hr />
+
+                <div className="px-6 flex flex-col justify-around">
+                  {item.service.map((item,index)=>(
+                    <p 
+                    key = {index}
+                    className="mb-1">
+                      <span className="flex items-center">
+                        <FaCheck size={12}
+                          className="text-green-500"
+                        /> 
+                        &#160; {item}
+                      </span>
+                    </p>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
       </div>
-    </div>
-     
-      
     </div>
   )
 }

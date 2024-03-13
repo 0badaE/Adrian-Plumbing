@@ -9,6 +9,9 @@ import mc from "../assets/mc.png"
 import visa from "../assets/visa.png"
 import cash from "../assets/cash.png"
 import interac from "../assets/interac.png"
+import { MdOutlineLocationOn } from "react-icons/md";
+import { FaRegClock } from "react-icons/fa";
+
 
 function HomePage() {
 
@@ -25,7 +28,7 @@ function HomePage() {
       >
         <div className="w-full h-full p-6">
           <div className="md:w-[55%] md:text-white lg:my-[45px]">
-            <h1 className="text-white text-center text-3xl md:text-xl font-semibold mt-3 mb-12 md:mb-5">Plombiers Certifiés à Votre Service</h1>
+            <h1 className="text-white text-center text-3xl md:text-xl font-semibold mt-3 mb-14 md:mb-5">Plombiers Certifiés à Votre Service</h1>
             <p className="text-md text-center md:text-sm">Notre équipe de plombiers certifiés intervient chez vous, dans vos commerces et dans vos installations industrielles. Réparations, installations, conseils : nous sommes là pour vous offrir des solutions fiables et durables. Faites confiance à notre expertise ! </p>
           
             <div className="w-full h-[100px] md:h-[80px] flex justify-around items-center text-white lg:mt-8 lg:px-10">
@@ -65,16 +68,42 @@ function HomePage() {
             </div>
            
           </div>
-          <hr/>
-          <div className="p-6 w-full h-[200px] md:h-36 flex flex-col justify-center items-center md:justify-around md:flex-row md:px-12">
-            <img 
-            src={cmmtq} 
-            alt="cmmtq" 
-            className="w-56 mb-6 md:w-[300px]"
-            />
-            <p className="text-center text-sm"> Nous possèdons les qualifications professionnelles et les compétences nécessaires pour exécuter des travaux en plomberie.</p>
+
+          {/* Why work with us? */}
+          <div className="py-6 w-full h-[200px] md:h-46 justify-center items-center md:justify-around md:flex-row md:px-12 bg-gray-200">
+            <h1 className="text-l sm:text-2xl font-medium w-full text-center mb-7">Pourquoi Travailler avec Nous?</h1>
+            <div className="flex justify-around">
+              
+              <div className="flex flex-col items-center w-48 justify-between">
+                <MdOutlineLocationOn 
+                size={48}
+                className="text-[#295880] mb-5 hover:scale-105 hover:cursor-pointer"
+                />
+                <p className="text-center text-xs sm:text-sm w-full">Plombiers Locaux</p>
+              </div>
+
+              <div className="flex flex-col items-center w-48 justify-between">
+                <img 
+                src={cmmtq} 
+                alt="cmmtq" 
+                className="w-36 mt-2 sm:mt-0 hover:scale-105 hover:cursor-pointer"
+                />
+                <p className="text-center text-xs sm:text-sm w-full">Certifié et Assuré</p>
+              </div>
+
+              <div className="flex flex-col items-center justify-around w-48">
+              <FaRegClock 
+                size={45}
+                className="text-[#295880] mb-5 hover:scale-105 hover:cursor-pointer"
+                />
+                <p className="text-center text-xs sm:text-sm w-full">Service 24/7</p>
+              </div>
+
+            </div>
+           
+            
           </div>
-          <hr/>
+          {/* Accepted Payment Section */}
           <div className="p-6 w-full h-[200px]">
             <h1 className="text-2xl font-medium mb-6">Nous Acceptons</h1>
             <div className="flex justify-around w-full items-center">
