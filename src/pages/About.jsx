@@ -64,7 +64,7 @@ function About() {
                 }
               </ul>
             </div>
-
+              <hr />
             <div className="flex flex-col mb-5 p-2">
               <h1 className="text-3xl sm:text-4xl font-medium w-full mb-7 text-center sm:text-left">Nous Servons</h1>
               <ul>
@@ -112,8 +112,8 @@ function About() {
                 </li>
               </ul>
             </div>
-
-            <div className="w-[350px] flex flex-col items-center p-2">
+              <hr />
+            <div className=" w-full sm:w-[350px] flex flex-col items-center p-2">
               <h1 className="text-3xl sm:text-4xl font-medium mb-7 text-center sm:text-left">Nos Prix</h1>
               <p className="mb-5">
               Nous identifions la source du problème pour vous offrir des solutions efficaces et économiques, en toute transparence. Contactez-nous pour un devis ou des détails sur nos services.</p>

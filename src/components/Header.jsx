@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, Link, useNavigate } from "react-router-dom"
+import { NavLink, Link, useNavigate,useLocation } from "react-router-dom"
 import Logo from "../assets/Logo.png"
 import { IoMenu } from "react-icons/io5";
 import { FaTimes } from "react-icons/fa";
@@ -13,6 +13,8 @@ function Header() {
   const [hoveredItem, setHoveredItem] = React.useState(null);
   const [submenu, setSubmenu] = React.useState(null);
   const navigate = useNavigate();
+  let location = useLocation();
+
   
   const list = [
     {
@@ -23,30 +25,94 @@ function Header() {
     {
       id:2,
       name: "Résidentiel",
-      location: "/service-resi",
       submenu : [
-        "Réparation", 
-        "Vérification",
-        "Rénovation ",
-        "Tuyauteries", 
-        "Inspection", 
-        "Installation",
-        "Debouchage",
+        {
+          id: 1 ,
+          name: "Construction",
+          path: "/service-resi/construction"
+        },
+        {
+          id: 2 ,
+          name:"Réparation",
+          path: "réparation"
+        }, 
+        {
+          id: 3 ,
+          name:"Vérification",
+          path: "vérification"
+        },
+        {
+          id: 4 ,
+          name:"Inspection",
+          path: "inspection"
+        }, 
+        {
+          id: 5 ,
+          name:"Rénovation",
+          path: "rénovation"
+        },
+        {
+          id: 6 ,
+          name:"Installation",
+          path: "installation"
+        },
+        {
+          id: 7 ,
+          name:"Tuyauteries",
+          path: "tuyauteries"
+        }, 
+        {
+          id: 8 ,
+          name:"Debouchage",
+          path: "debouchage"
+        },
       ]
     },
     
     {
       id:3,
       name: "Professionnel",
-      location: "/1",
       submenu : [
-        "Réparation", 
-        "Vérification",
-        "Rénovation ",
-        "Tuyauteries", 
-        "Inspection", 
-        "Installation",
-        "Debouchage",
+        {
+          id: 1 ,
+          name: "Construction",
+          path: "/service-resi/construction"
+        },
+        {
+          id: 2 ,
+          name:"Réparation",
+          path: "réparation"
+        }, 
+        {
+          id: 3 ,
+          name:"Vérification",
+          path: "vérification"
+        },
+        {
+          id: 4 ,
+          name:"Inspection",
+          path: "inspection"
+        }, 
+        {
+          id: 5 ,
+          name:"Rénovation",
+          path: "rénovation"
+        },
+        {
+          id: 6 ,
+          name:"Installation",
+          path: "installation"
+        },
+        {
+          id: 7 ,
+          name:"Tuyauteries",
+          path: "tuyauteries"
+        }, 
+        {
+          id: 8 ,
+          name:"Debouchage",
+          path: "debouchage"
+        },
       ]
     },
     {
@@ -56,10 +122,10 @@ function Header() {
     }
   ]
 
-  const activeStyles = {
-    textDecoration: "underline",
-    color: "#1894edff"
-}
+//   const activeStyles = {
+//     textDecoration: "underline",
+//     color: "#1894edff"
+// }
   
   return (
     <>  
@@ -93,11 +159,12 @@ function Header() {
                className="relative"
                onMouseEnter={() => setHoveredItem(item.id)}
                onMouseLeave={() => setHoveredItem(null)}
+               onClick = {() => setHoveredItem(item.id)}
               >
                 <NavLink
-                  to={item.location}
+                  to={item.location || location}
                   className="cursor-pointer hover:underline hover:text-[#1894edff]"
-                  style={({ isActive }) => isActive ? activeStyles : null}
+                  // style={({ isActive }) => isActive ? activeStyles : null}
                 >
                   <span className="flex items-center">
                   {item.name} {item.submenu && <IoIosArrowDown size={12} className={`${item.id === hoveredItem && "rotate-180"}`}/>}
@@ -112,10 +179,10 @@ function Header() {
                       {item.submenu.map((subItem,index) => (
                         <NavLink 
                           className="hover:text-[#1894edff] hover:rounded hover:bg-gray-200 p-1"
-                          key={subItem} 
-                          to={`/${subItem}`}
+                          key={subItem.id} 
+                          to={`${subItem.path}`}
                         >
-                          {subItem}
+                          {subItem.name}
                         </NavLink>
                       ))}
                     </div>
@@ -169,11 +236,12 @@ function Header() {
                         <div>
                           <NavLink 
                           className="flex pl-6 py-3"
-                          key={subItem} 
-                          to={`/${subItem}`}
+                          key={subItem.id} 
+                          to={`${subItem.path}`}
+                          onClick={()=> setMenuBtn(false)}
                         >
-                          {subItem}
-                        </NavLink>
+                            {subItem.name}
+                          </NavLink>
                         </div>
                       ))}
                       

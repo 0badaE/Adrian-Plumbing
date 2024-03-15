@@ -3,44 +3,37 @@ import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
-  Route
+  Route,
+  Routes
 } from "react-router-dom"
 import Layout from "./components/Layout"
-import ServicesResi from "./components/ServicesResi"
-import Debouchage from "./pages/ServiceResi/Debouchage"
-import Service2 from "./pages/ServiceResi/Service2"
-import Service3 from "./pages/ServiceResi/Service3"
-import Service4 from "./pages/ServiceResi/Service4"
+import ServicesResi from "./pages/ServicesResi"
+import ServiceComm from "./pages/ServiceComm"
+import ServicesIndu from "./pages/ServicesIndu"
 import Contact from "./pages/Contact"
 import HomePage from "./pages/HomePage"
 import Services from "./pages/Services"
 import About from "./pages/About"
+//Service Residentiels
+import ConstructionResi from "./ServiceResi/ConstructionResi"
 
 function App() {
 
   const router = createBrowserRouter(createRoutesFromElements(
     <>
       <Route path="/" element={<Layout/>}>
-        <Route index element={<HomePage/>}/>
-        <Route path="services" element={<Services/>}/>
-        <Route path="contact" element={<Contact/>}/>
-        <Route path="about" element={<About/>}/>
-
-        <Route path="service-resi" element={<ServicesResi/>}>
-          <Route index element={<Debouchage/>}/>
-          <Route path="2" element={<Service2/>}/>
-          <Route path="3" element={<Service3/>}/>
-          <Route path="4" element={<Service4/>}/>
-        </Route>
-        
-        
-          
-        {/* <Route path="service-ind" element={<{}/>}>
-
-        </Route> */}
-        
-
-        
+          <Route index element={<HomePage/>}/>
+          <Route path="services" element={<Services/>}/>
+          <Route path="contact" element={<Contact/>}/>
+          <Route path="about" element={<About/>}/>
+      
+          <Route path="service-resi" element={<ServicesResi/>}>
+            <Route path="construction" element={<ConstructionResi/>}/>
+          </Route>
+      
+          <Route path="service-comm" element={<ServiceComm/>}/>
+    
+          <Route path="service-indu" element={<ServicesIndu/>}/>
       </Route>
     </>
   ))

@@ -20,33 +20,31 @@ function Services() {
         "Tuyauteries", 
         "Inspection", 
         "Installation",
-        "Débouchage", 
-        "Installation",
+        "Dégel de tuyaux",
+        "Débouchage",
         "Évaluation",
         "Fuite d’eau",
         "Service Frigo",
         "Service Robinet",
-        "Pompe submersible",
+        "Pompe Submersible",
         "et Plus!"
       ]
     },
     {
-      title: "Commercial",
+      title: "Professionnel",
       photo: industrial,
       service: [
-        "Service 1",
-        "Service 2",
-        "Service 3",
-        "et Plus!"
-      ]
-    },
-    {
-      title: "Industrielle",
-      photo: commercial,
-      service: [
-        "Service 1",
-        "Service 2",
-        "Service 3",
+        "Trappe à graisse",
+        "Drains de Toit",
+        "Salle de Bain",
+        "Urinoir", 
+        "Abreuvoir", 
+        "Robinet de Chasse",
+        "Ligne d’air, eau refroidie",
+        "Nettoyage par Pression",
+        "Appareils Sanitaires",
+        "Amorceur de siphon",
+        "Les Services Residentiels",
         "et Plus!"
       ]
     },
