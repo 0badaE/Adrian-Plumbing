@@ -29,42 +29,52 @@ function Header() {
         {
           id: 1 ,
           name: "Construction",
-          path: "/service-resi/construction"
+          path: "service-resi/construction"
         },
         {
           id: 2 ,
           name:"Réparation",
-          path: "réparation"
+          path: "service-resi/réparation"
         }, 
         {
           id: 3 ,
           name:"Vérification",
-          path: "vérification"
+          path: "service-resi/vérification"
         },
         {
           id: 4 ,
           name:"Inspection",
-          path: "inspection"
+          path: "service-resi/inspection"
         }, 
         {
           id: 5 ,
           name:"Rénovation",
-          path: "rénovation"
+          path: "service-resi/rénovation"
         },
         {
           id: 6 ,
           name:"Installation",
-          path: "installation"
+          path: "service-resi/installation"
         },
         {
           id: 7 ,
-          name:"Tuyauteries",
-          path: "tuyauteries"
-        }, 
+          name:"Chauffe-Eau",
+          path: "service-resi/chauffe-eau"
+        },
         {
           id: 8 ,
-          name:"Debouchage",
-          path: "debouchage"
+          name:"Tuyauteries",
+          path: "service-resi/tuyauteries"
+        }, 
+        {
+          id: 9 ,
+          name:"Débouchage",
+          path: "service-resi/débouchage"
+        },
+        {
+          id: 10 ,
+          name:"Nos Services",
+          path: "/service-resi"
         },
       ]
     },
@@ -76,42 +86,57 @@ function Header() {
         {
           id: 1 ,
           name: "Construction",
-          path: "/service-resi/construction"
+          path: "/service-prof/construction"
         },
         {
           id: 2 ,
           name:"Réparation",
-          path: "réparation"
+          path: "/service-prof/réparation"
         }, 
         {
           id: 3 ,
           name:"Vérification",
-          path: "vérification"
+          path: "/service-prof/vérification"
         },
         {
           id: 4 ,
           name:"Inspection",
-          path: "inspection"
+          path: "/service-prof/inspection"
         }, 
         {
           id: 5 ,
           name:"Rénovation",
-          path: "rénovation"
+          path: "/service-prof/rénovation"
         },
         {
           id: 6 ,
           name:"Installation",
-          path: "installation"
+          path: "/service-prof/installation"
         },
         {
           id: 7 ,
-          name:"Tuyauteries",
-          path: "tuyauteries"
-        }, 
+          name:"Chauffe-Eau",
+          path: "service-prof/chauffe-eau"
+        },
         {
           id: 8 ,
-          name:"Debouchage",
-          path: "debouchage"
+          name:"Tuyauteries",
+          path: "/service-prof/tuyauteries"
+        }, 
+        {
+          id: 9  ,
+          name:"Débouchage",
+          path: "/service-prof/debouchage"
+        },
+        {
+          id: 9  ,
+          name:"Commercial",
+          path: "/service-comm"
+        },
+        {
+          id: 9  ,
+          name:"Industrielle",
+          path: "/service-indu"
         },
       ]
     },
@@ -122,10 +147,10 @@ function Header() {
     }
   ]
 
-//   const activeStyles = {
-//     textDecoration: "underline",
-//     color: "#1894edff"
-// }
+  const activeStyles = {
+    textDecoration: "underline",
+    color: "#1894edff"
+}
   
   return (
     <>  
@@ -164,7 +189,7 @@ function Header() {
                 <NavLink
                   to={item.location || location}
                   className="cursor-pointer hover:underline hover:text-[#1894edff]"
-                  // style={({ isActive }) => isActive ? activeStyles : null}
+                  style={({ isActive }) => isActive && item.location ? activeStyles : null}
                 >
                   <span className="flex items-center">
                   {item.name} {item.submenu && <IoIosArrowDown size={12} className={`${item.id === hoveredItem && "rotate-180"}`}/>}
@@ -235,7 +260,7 @@ function Header() {
                       {item.submenu.map((subItem) => (
                         <div>
                           <NavLink 
-                          className="flex pl-6 py-3"
+                          className="flex pl-6 py-3 text-[16.3px]"
                           key={subItem.id} 
                           to={`${subItem.path}`}
                           onClick={()=> setMenuBtn(false)}

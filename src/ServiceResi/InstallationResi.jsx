@@ -1,14 +1,14 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import construction from "../assets/construction.jpg"
-import bluehat from "../assets/bluehat.jpeg"
+import installationSection from "../assets/installationSection.jpg"
+import installationn from "../assets/installationn.jpg"
 import { MdOutlineLocationOn } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 import cmmtq from "../assets/CMMTQ.png";
 import { FaCheck } from "react-icons/fa"
 
 
-function ConstructionResi() {
+function RenovationResi() {
   const guarantee = [
     "Assurance de qualité",
     "Priorité au client",
@@ -21,34 +21,36 @@ function ConstructionResi() {
         <div
          className="w-full h-34 sm:h-48 lg:h-64 mb-6"
          style={{
-         backgroundImage: `url(${construction})`,
+         backgroundImage: `url(${installationSection})`,
          backgroundSize: "cover",
          backgroundRepeat: "no-repeat",
          }}
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
             <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center">
-              Construction Résidentiel</h1>
+            Installation Résidentiel</h1>
           </div>
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">
           <p className="p-2 w-full lg:w-[50%] mb-6">
-          Plomberie Adican est à la pointe de la construction résidentielle, apportant expertise et précision à chaque projet. Notre équipe s’engage à collaborer avec vous pour développer des espaces de vie qui allient sécurité et confort. En respectant les normes strictes de l’industrie, nous assurons la qualité et la durabilité de votre habitat. Notre objectif est de réaliser votre vision avec un service impeccable et une attention aux détails qui font notre renommée.
-          <ul>
+          L’installation de systèmes de plomberie performants est essentielle pour le confort et la fonctionnalité de votre espace. Chez Plomberie Adican, nous nous spécialisons dans l’installation de tous les éléments nécessaires à une plomberie efficace. Des simples robinets aux systèmes de chauffage complexes, notre équipe garantit une installation impeccable et durable, répondant aux besoins spécifiques de chaque client.            
+          
+            <ul>
                 <br />
                 <h1 className='text-2xl font-medium'>Nos Service</h1>
                 <br />
-                <li>&#8226; Installation de systèmes de plomberie</li>
-                <li>&#8226; Chauffage et Climatisation</li>
-                <li>&#8226; Salles de Bain et Cuisines</li>
-                <li>&#8226; Prévention des Dégâts d'Eaux</li>
+                <li>&#8226; Installation de Robinetterie et Sanitaires</li>
+                <li>&#8226; Raccordement d'Appareils Ménagers</li>
+                <li>&#8226; Systemes de Chauffages Central</li>
+                <li>&#8226; Solutions de Chauffe-Eau</li>
+                <li>&#8226; Tuyauterie sur Mesure</li>
                 <li>&#8226; et Plus!</li>
           </ul>
         </p>
           <img 
             className="rounded-xl w-full lg:w-[40%]"
-            src={bluehat}
-            alt="bluehat" 
+            src={installationn}
+            alt="installationn" 
           />
         </div>
         <div className="py-6 w-full h-[200px] md:h-46 justify-center items-center md:justify-around md:flex-row md:px-12 bg-[#f4f8fa]">
@@ -124,4 +126,4 @@ function ConstructionResi() {
   )
 }
 
-export default ConstructionResi
+export default RenovationResi
