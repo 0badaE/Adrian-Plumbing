@@ -155,25 +155,25 @@ function Header() {
   return (
     <>  
 
-      <div className="w-screen h-12 bg-[#126DAF] flex items-center justify-around text-white">
+      <div className="w-screen h-12 bg-[#126DAF] flex items-center justify-around text-white ">
         <div className="flex items-center text-xs w-full max-w-[1000px] md:text-base justify-between px-3"> 
         <div className="flex">
-          <p className="flex items-center"> <BiPhoneCall size={18}/>&#160;Urgence Plomberie? &#160;24/7 -&#160; <a className="underline" href="tel:1234567890">(123) 456-7890</a></p>
+          <p className="flex items-center"> <BiPhoneCall size={18}/>&#160;Urgence Plomberie? &#160;24/7 -&#160; <a className="underline" href="tel:5144496331">(514) 449-6331</a></p>
         </div>
           <button
           className="text-lg font-semibold"
           onClick={()=>console.log("English was clicked!")}
           >
-          Eng
+          EN
           </button>
         </div>
       </div>
       
-      <header className="h-28 p-3 w-screen max-w-[1000px] mx-auto flex items-center justify-between bg-white  overflow-visible relative z-9">
+      <header className="h-28 p-3 w-screen max-w-[1000px] mx-auto flex items-center justify-between overflow-visible relative z-9">
         <Link
         to="/"
         >
-          <img src={Logo} alt="logo" className="w-36 rounded-lg max-sm:w-28"/>
+          <img src={Logo} alt="logo" className="w-40 max-sm:w-32"/>
         </Link>
         
         <nav className="w-[600px] max-sm:hidden h-20 flex items-center">
@@ -231,11 +231,11 @@ function Header() {
       
         {
           menuBtn && ( 
-            <ul className="menu-animation flex flex-col text-[#10639e] text-xl font-medium items-center absolute w-full bg-white z-9 mt-[125px]">
+            <ul className="menu-animation flex flex-col text-gray-500 text-xl font-medium items-center absolute w-full bg-white z-9 mt-[125px]">
               {
                 list.map((item,index)=> (
                 <div
-                  className='border-2 p-2 border-white border-b-[#10639e]'
+                  className='border-2 py-2 border-white border-b-[#c0d8eb]'
                   key = {index}
                   onClick={()=>setSubmenu(item.id === submenu ? null : item.id)}
                 >
@@ -256,7 +256,7 @@ function Header() {
                     {
                       item.submenu && item.id === submenu && (
                       <div
-                        className="text-[#295780] flex flex-col w-[130px] justify-around"
+                        className="text-gray-500 flex flex-col w-[130px] justify-around"
                       >
                       {item.submenu.map((subItem) => (
                         <div>

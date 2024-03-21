@@ -1,5 +1,6 @@
 import React from 'react'
 import { MdOutlineMail } from "react-icons/md";
+import { FaFacebook} from "react-icons/fa";
 
 
 function Contact() {
@@ -8,8 +9,22 @@ function Contact() {
     <div className="flex flex-col px-4 justify-center mx-auto">
          <div className="py-2 mb-5">
             <p className="text-3xl font-bold inline border-b-4 border-[#4492C6] ">Contactez-Nous</p>
-            <p className="py-6 text-black">Appeler nous au <a className="underline font-bold text-[#4492C6]" href="tel:1234567890">(123) 456-7890</a></p>
-            <p>Ou soumettre le formulaire ci-dessous pour nous envoyer un courriel!</p>
+            <p className="pt-6 text-black">Appeler nous au <a className="underline font-bold text-[#4fb6ffff]" href="tel:5144496331">(514) 449-6331</a></p>
+            <p className="flex mb-6 items-center">
+            Envoyez-nous un message sur &#160;
+              <a 
+                href="https://www.facebook.com/plomberieadican?mibextid=qi2Omg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                  <FaFacebook
+                    size={30}
+                    className='text-[#0866ff]'
+                  />
+              </a>
+
+            </p>
+            <p>Soumettez le formulaire ci-dessous pour nous envoyer un courriel!</p>
           </div>
 
           <div className="flex justify-center items-center">
