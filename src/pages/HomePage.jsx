@@ -56,23 +56,23 @@ function HomePage() {
                 >
                   <img className="w-28 mb-1"src={home} alt="home" />
                 </Link>
-                <p className='underline underline-offset-2'>Residentiel</p>
+                <p className='underline text-sm underline-offset-2'>Residentiel</p>
               </div>
               <div className='flex flex-col justify-between items-center hover:scale-105 hover:cursor-pointer'>
               <Link
               to="/service-comm"
               >
-                <img className="w-24 mb-1"src={commercial} alt="commercial" />
+                <img className="w-[92px] mb-1"src={commercial} alt="commercial" />
               </Link>
-              <p className='underline underline-offset-2'>Commercial</p>
+              <p className='underline text-sm underline-offset-2'>Commercial</p>
               </div>
               <div className='flex flex-col justify-between items-center hover:scale-105 hover:cursor-pointer'>
               <Link
               to="/service-indu"
               >
-                <img className="w-24 mb-1"src={industrial} alt="industrial" />
+                <img className="w-[92px] mb-1"src={industrial} alt="industrial" />
               </Link>
-              <p className='underline underline-offset-2'>Industrial</p>
+              <p className='underline text-sm underline-offset-2'>Industrial</p>
               </div>
             </div>
            
