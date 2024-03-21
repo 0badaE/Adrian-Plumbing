@@ -50,21 +50,30 @@ function HomePage() {
           <div className="p-6 w-full h-[200px]">
             <h1 className="text-2xl font-medium mb-6">Nous Servons</h1>
             <div className="w-full flex items-center justify-around">
-              <Link
-              to="/service-resi"
-              >
-                <img className="w-28 hover:scale-105 hover:cursor-pointer"src={home} alt="home" />
-              </Link>
+              <div className='flex flex-col justify-between items-center hover:scale-105 hover:cursor-pointer'>
+                <Link
+                 to="/service-resi"
+                >
+                  <img className="w-28 mb-1"src={home} alt="home" />
+                </Link>
+                <p className='underline underline-offset-2'>Residentiel</p>
+              </div>
+              <div className='flex flex-col justify-between items-center hover:scale-105 hover:cursor-pointer'>
               <Link
               to="/service-comm"
               >
-                <img className="w-24 hover:scale-105 hover:cursor-pointer"src={commercial} alt="commercial" />
+                <img className="w-24 mb-1"src={commercial} alt="commercial" />
               </Link>
+              <p className='underline underline-offset-2'>Commercial</p>
+              </div>
+              <div className='flex flex-col justify-between items-center hover:scale-105 hover:cursor-pointer'>
               <Link
               to="/service-indu"
               >
-                <img className="w-24 hover:scale-105 hover:cursor-pointer"src={industrial} alt="industrial" />
+                <img className="w-24 mb-1"src={industrial} alt="industrial" />
               </Link>
+              <p className='underline underline-offset-2'>Industrial</p>
+              </div>
             </div>
            
           </div>
