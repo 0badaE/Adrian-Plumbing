@@ -158,7 +158,7 @@ function Header() {
       <div className="w-screen h-12 bg-[#126DAF] flex items-center justify-around text-white">
         <div className="flex items-center text-xs w-full max-w-[1000px] md:text-base justify-between px-3"> 
         <div className="flex">
-          <p className="flex items-center"> <BiPhoneCall size={18}/>&#160;Urgence Plomberie? &#160;24/7 -&#160; <a className="underline"href="tel:#">(123) 456-7890</a></p>
+          <p className="flex items-center"> <BiPhoneCall size={18}/>&#160;Urgence Plomberie? &#160;24/7 -&#160; <a className="underline" href="tel:1234567890">(123) 456-7890</a></p>
         </div>
           <button
           className="text-lg font-semibold"

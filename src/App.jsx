@@ -25,6 +25,14 @@ import TuyauteriesResi from "./ServiceResi/TuyauteriesResi"
 import DebouchageResi from "./ServiceResi/DebouchageResi"
 //Service Professionel
 import ConstructionProf from "./ServiceProf/ConstructionProf"
+import ReparationProf from "./ServiceProf/ReparationProf"
+import VerificationProf from "./ServiceProf/VerificationProf"
+import InspectionProf from "./ServiceProf/InspectionProf"
+import RenovationProf from "./ServiceProf/RenovationProf"
+import InstallationProf from "./ServiceProf/InstallationProf"
+import ChauffeEauProf from "./ServiceProf/ChauffeEauProf"
+import DebouchageProf from "./ServiceProf/DebouchageProf"
+import TuyauterieProf from "./ServiceProf/TuyauterieProf"
 
 function App() {
   const router = createBrowserRouter(createRoutesFromElements(
@@ -47,14 +55,14 @@ function App() {
       <Route path="service-resi/débouchage" element={<DebouchageResi/>}/>
       {/* Section Professionel */}
       <Route path="service-prof/construction" element={<ConstructionProf/>}/>
-      <Route path="service-prof/réparation" element={<ConstructionProf/>}/>
-      <Route path="service-prof/vérification" element={<ConstructionProf/>}/>
-      <Route path="service-prof/inspection" element={<ConstructionProf/>}/>
-      <Route path="service-prof/rénovation" element={<ConstructionProf/>}/>
-      <Route path="service-prof/installation" element={<ConstructionProf/>}/>
-      <Route path="service-prof/chauffe-eau" element={<ConstructionProf/>}/>
-      <Route path="service-prof/tuyauteries" element={<ConstructionProf/>}/>
-      <Route path="service-prof/debouchage" element={<ConstructionProf/>}/>
+      <Route path="service-prof/réparation" element={<ReparationProf/>}/>
+      <Route path="service-prof/vérification" element={<VerificationProf/>}/>
+      <Route path="service-prof/inspection" element={<InspectionProf/>}/>
+      <Route path="service-prof/rénovation" element={<RenovationProf/>}/>
+      <Route path="service-prof/installation" element={<InstallationProf/>}/>
+      <Route path="service-prof/chauffe-eau" element={<ChauffeEauProf/>}/>
+      <Route path="service-prof/debouchage" element={<DebouchageProf/>}/>
+      <Route path="service-prof/tuyauteries" element={<TuyauterieProf/>}/>
       <Route path="service-comm" element={<ServiceComm/>}/>
       <Route path="service-indu" element={<ServicesIndu/>}/>
     </Route>

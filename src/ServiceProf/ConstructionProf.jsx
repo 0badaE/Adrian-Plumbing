@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import WaterHeaterSection from "../assets/WaterHeaterSection.jpg"
-import WaterHeaterPhoto from "../assets/WaterHeaterPhoto.jpg"
+import ConstructionIndu from "../assets/ConstructionIndu.jpeg"
+import ConstructionProff from "../assets/ConstructionProf.jpg"
 import { MdOutlineLocationOn } from "react-icons/md";
 import { SlBadge } from "react-icons/sl";
 import cmmtq from "../assets/CMMTQ.png";
@@ -21,36 +21,36 @@ function ConstructionProf() {
         <div
          className="w-full h-34 sm:h-48 lg:h-64 mb-6"
          style={{
-         backgroundImage: `url(${WaterHeaterSection})`,
+         backgroundImage: `url(${ConstructionProff})`,
          backgroundSize: "cover",
          backgroundRepeat: "no-repeat",
          }}
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
-            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center">
-            Construction Prof</h1>
+            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center text-center">
+              Construction Professionnelle
+            </h1>
           </div>
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">
           <p className="p-2 w-full lg:w-[50%] mb-6">
-          Un chauffe-eau fiable est au cœur du confort domestique. Plomberie Adican vous offre des solutions de chauffe-eau adaptées à vos besoins, qu’il s’agisse de modèles électriques, à gaz ou solaires. Nos techniciens qualifiés s’assurent que chaque installation est effectuée avec précision, pour une performance optimale et durable. Choisissez Plomberie Adican pour une eau chaude abondante et constante.            
-          
+          Plomberie Adican est votre allié de choix pour tous vos projets de construction professionnelle, commerciale ou industrielle. Notre expertise s’étend à la réalisation d’installations plomberie complexes, répondant aux exigences spécifiques des environnements commerciaux et industriels. Nous nous engageons à fournir des solutions durables et performantes, en utilisant des matériaux de première qualité et les dernières innovations technologiques.          
             <ul>
                 <br />
                 <h1 className='text-2xl font-medium'>Nos Service</h1>
                 <br />
-                <li>&#8226; Installation de Chauffe-Eau Électriques, à Gaz et Solaire</li>
-                <li>&#8226; Utilisation de Caméras d’Inspection</li>
-                <li>&#8226; Mise à Niveau des Systèmes de Chauffe-Eau</li>
-                <li>&#8226; Inspection de Sécurité du Chauffe-Eau</li>
-                <li>&#8226; Conseils Personnalisés sur le Choix du Chauffe-Eau </li>
+                <li>&#8226; Conception et Installation de Plomberie Industriel</li>
+                <li>&#8226; Plomberie pour Constructions Commerciales</li>
+                <li>&#8226; Intégration de Technologies Avancées</li>
+                <li>&#8226; Respect des Normes de Sécurité et Environnementales</li>
+                <li>&#8226; Maintenance et Support Technique</li>
                 <li>&#8226; et Plus!</li>
           </ul>
         </p>
           <img 
             className="rounded-xl w-full lg:w-[40%]"
-            src={WaterHeaterPhoto}
-            alt="WaterHeaterPhoto" 
+            src={ConstructionIndu}
+            alt="ConstructionIndu" 
           />
         </div>
         <div className="py-6 w-full h-[200px] md:h-46 justify-center items-center md:justify-around md:flex-row md:px-12 bg-[#f4f8fa]">
