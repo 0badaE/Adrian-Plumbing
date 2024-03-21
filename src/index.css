@@ -22,3 +22,12 @@ hr{
         scrollbar-width: none;  /* Firefox */
   }
 }
+
+@keyframes slideDown {
+    0% { transform: translateY(-35%); }
+    100% { transform: translateY(0); }
+  }
+  
+  .menu-animation {
+    animation: slideDown 0.2s ease-out;
+  }

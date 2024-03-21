@@ -128,6 +128,16 @@ function Header() {
           name:"Débouchage",
           path: "/service-prof/debouchage"
         },
+        {
+          id: 10  ,
+          name:"Commercial",
+          path: "/service-comm"
+        },
+        {
+          id: 11  ,
+          name:"Industrielle",
+          path: "/service-indu"
+        },
       ]
     },
     {
@@ -213,7 +223,7 @@ function Header() {
             onClick={() => setMenuBtn(!menuBtn)}
           />
           :
-          <FaTimes className={`text-[35px] sm:hidden ${menuBtn && "text-white"} cursor-pointer z-10`}
+          <FaTimes className={`text-[35px] sm:hidden} text-[#126DAF] cursor-pointer z-10`}
           onClick={() => setMenuBtn(!menuBtn)}
           />
         }
@@ -221,15 +231,16 @@ function Header() {
       
         {
           menuBtn && ( 
-            <ul className={"flex flex-col text-white text-xl font-medium py-40 justify-around items-center absolute h-[115%] w-full bg-[#4fb6ff] z-9"}>
+            <ul className="menu-animation flex flex-col text-[#10639e] text-xl font-medium items-center absolute w-full bg-white z-9 mt-[125px]">
               {
                 list.map((item,index)=> (
                 <div
+                  className='border-2 p-2 border-white border-b-[#10639e]'
                   key = {index}
                   onClick={()=>setSubmenu(item.id === submenu ? null : item.id)}
                 >
                   <p 
-                    className="my-4 text-2xl"
+                    className="text-2xl w-screen p-3 font-semibold"
                     key={index}
                     onClick={()=>{
                       if(item.submenu === undefined){
@@ -238,19 +249,19 @@ function Header() {
                       }}}
                   >
 
-                    <span className={`flex items-center cursor-pointer ${item.submenu && "underline underline-offset-4"}`}>
+                    <span className={`flex items-center cursor-pointer`}>
                       {item.name} {item.submenu && <IoIosArrowDown size={12} className={`${item.id === submenu && "rotate-180"}`}/>}
                     </span>
                   </p>
                     {
                       item.submenu && item.id === submenu && (
                       <div
-                        className="text-white flex flex-col w-[130px] justify-around"
+                        className="text-[#295780] flex flex-col w-[130px] justify-around"
                       >
                       {item.submenu.map((subItem) => (
                         <div>
                           <NavLink 
-                          className="flex pl-6 py-3 text-[16.3px]"
+                          className="flex pl-6 py-3 text-[16.3px] font-medium"
                           key={subItem.id} 
                           to={`${subItem.path}`}
                           onClick={()=> setMenuBtn(false)}
@@ -266,7 +277,7 @@ function Header() {
                 </div>
               ))
                 
-              }  
+              }
             </ul>
           )
         }
