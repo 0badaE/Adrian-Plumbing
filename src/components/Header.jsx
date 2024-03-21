@@ -128,16 +128,6 @@ function Header() {
           name:"Débouchage",
           path: "/service-prof/debouchage"
         },
-        {
-          id: 9  ,
-          name:"Commercial",
-          path: "/service-comm"
-        },
-        {
-          id: 9  ,
-          name:"Industrielle",
-          path: "/service-indu"
-        },
       ]
     },
     {
@@ -231,7 +221,7 @@ function Header() {
       
         {
           menuBtn && ( 
-            <ul className={"flex flex-col text-white text-xl font-medium py-40 justify-around items-center absolute h-screen w-full bg-[#4fb6ff] z-9"}>
+            <ul className={"flex flex-col text-white text-xl font-medium py-40 justify-around items-center absolute h-[115%] w-full bg-[#4fb6ff] z-9"}>
               {
                 list.map((item,index)=> (
                 <div
