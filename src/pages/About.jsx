@@ -7,13 +7,13 @@ import home from "../assets/residentiel.png"
 import industrial from "../assets/industrielle.png"
 import commercial from "../assets/commercial.png"
 
-function About() {
+function About(props) {
   const guarantee = [
-    "Assurance de qualité",
-    "Priorité au client",
-    "Intégrité professionnelle",
-    "Transparence et confiance",
-    "Service d’excellence"
+    props.lang?"Assurance de qualité" : "Quality Assurance",
+    props.lang?"Priorité au client" : "Client Priority",
+    props.lang?"Intégrité professionnelle" : "Professional Integrity",
+    props.lang?"Transparence et confiance" : "Transparency and Trust",
+    props.lang?"Service d’excellence" : "Excellent Service"
   ]
   return (
     <div className="text-black w-full h-full max-w-[1000px] m-auto sm:w-full no-scrollbar  overflow-y-scroll">
@@ -27,15 +27,16 @@ function About() {
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
             <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center">
-              Plomberie Adican</h1>
+              {props.lang?"Plomberie Adican":"Adican Plumbing"}</h1>
           </div>
         </div>
         <div className="p-2 flex flex-col lg:flex-row justify-around items-center">
           <p className="p-2 w-full lg:w-[50%] mb-6">
-            Au cœur de Montréal, Plomberie Adican est synonyme d’excellence en plomberie pour les secteurs résidentiel, commercial et industriel. Disponible 24/7, notre équipe d’experts est reconnue pour sa fiabilité et son savoir-faire. Nous nous engageons à assurer le confort et la sécurité de nos clients, en apportant des solutions durables grâce à notre maîtrise des technologies de pointe.
+            {props.lang?"Au cœur de Montréal, Plomberie Adican est synonyme d’excellence en plomberie pour les secteurs résidentiel, commercial et industriel. Disponible 24/7, notre équipe d’experts est reconnue pour sa fiabilité et son savoir-faire. Nous nous engageons à assurer le confort et la sécurité de nos clients, en apportant des solutions durables grâce à notre maîtrise des technologies de pointe." : "Situated in the heart of Montreal, Adican Plumbing is synonymous with excellence in plumbing services for residential, commercial, and industrial sectors. Available 24/7, our team of experts is recognized for their reliability and expertise. We are committed to ensuring the comfort and safety of our clients by providing sustainable solutions through our mastery of cutting-edge technologies."
+            }
             <br />
             <br />
-            Nous anticipons et résolvons vos problèmes de plomberie avant même qu’ils ne se   manifestent, vous offrant ainsi une tranquillité d’esprit sans pareil. Chez   Plomberie Adican, chaque intervention est une promesse de qualité et d’efficacité,  adaptée à tous les environnements, qu’ils soient domestiques, professionnels ou  industriels.
+            {props.lang?"Nous anticipons et résolvons vos problèmes de plomberie avant même qu’ils ne se manifestent, vous offrant ainsi une tranquillité d’esprit sans pareil. Chez   Plomberie Adican, chaque intervention est une promesse de qualité et d’efficacité,  adaptée à tous les environnements, qu’ils soient domestiques, professionnels ou  industriels.": "We anticipate and resolve your plumbing issues before they even arise, offering you unparalleled peace of mind. At Adican Plumbing, each intervention is a promise of quality and efficiency, tailored to all environments, whether they be domestic, professional, or industrial."}
           </p>
           <img 
             src={unclog} 
@@ -46,7 +47,7 @@ function About() {
 
           <div className="w-full p-6 flex flex-col sm:flex-row justify-around">
             <div className="flex flex-col mb-5 p-2">
-              <h1 className="text-3xl sm:text-4xl font-medium w-full mb-7 text-center sm:text-left">Notre Guarantie</h1>
+              <h1 className="text-3xl sm:text-4xl font-medium w-full mb-7 text-center sm:text-left">{props.lang?"Notre Guarantee": "Our Guarantee"}</h1>
               <ul>
                 {
                   guarantee.map((item,index)=>(
@@ -66,7 +67,7 @@ function About() {
             </div>
               <hr />
             <div className="flex flex-col mb-5 p-2">
-              <h1 className="text-3xl sm:text-4xl font-medium w-full mb-7 text-center sm:text-left">Nous Servons</h1>
+              <h1 className="text-3xl sm:text-4xl font-medium w-full mb-7 text-center sm:text-left">{props.lang?"Nous Servons":"We Serve"}</h1>
               <ul>
                 <li 
                   className="flex mb-3 items-center">
@@ -80,7 +81,7 @@ function About() {
                     className="w-12"
                   />
                   &#160;
-                  Residentielle
+                  {props.lang?"Residentiel":"Residential"}
                 </li>
                 <li 
                   className="flex mb-3 items-center">
@@ -108,20 +109,20 @@ function About() {
                     className="w-12"
                   />
                   &#160;
-                  Industrielle
+                  {props.lang?"Industriel":"Industrial"}
                 </li>
               </ul>
             </div>
               <hr />
             <div className=" w-full sm:w-[350px] flex flex-col items-center p-2">
-              <h1 className="text-3xl sm:text-4xl font-medium mb-7 text-center sm:text-left">Nos Prix</h1>
+              <h1 className="text-3xl sm:text-4xl font-medium mb-7 text-center sm:text-left">{props.lang?"Nos Prix":"Our Prices"}</h1>
               <p className="mb-5">
-              Nous identifions la source du problème pour vous offrir des solutions efficaces et économiques, en toute transparence. Contactez-nous pour un devis ou des détails sur nos services.</p>
+              {props.lang?"Nous identifions la source du problème pour vous offrir des solutions efficaces et économiques, en toute transparence. Contactez-nous pour un devis ou des détails sur nos services." : "We identify the root of the problem to provide you with effective and economical solutions, all with complete transparency. Contact us for a quote or for more details about our services."}</p>
               <Link 
                to="/contact"
                className="w-[160px] text-white text-center p-3 md:p-2 lg:p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
               >
-                Contactez-Nous
+                {props.lang?"Contactez-Nous":"Contact Us"}
               </Link>
             </div>
 

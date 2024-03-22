@@ -35,36 +35,37 @@ import DebouchageProf from "./ServiceProf/DebouchageProf"
 import TuyauterieProf from "./ServiceProf/TuyauterieProf"
 
 function App() {
+  const [language, setLanguage] = React.useState(true)
   const router = createBrowserRouter(createRoutesFromElements(
   <>
-    <Route path="/" element={<Layout/>}>
-      <Route index element={<HomePage/>}/>
-      <Route path="services" element={<Services/>}/>
-      <Route path="contact" element={<Contact/>}/>
-      <Route path="about" element={<About/>}/>
+    <Route path="/" element={<Layout lang = {language} toggle={()=>setLanguage(!language)}/>}>
+      <Route index element={<HomePage lang = {language} />}/>
+      <Route path="services" element={<Services lang = {language}/>}/>
+      <Route path="contact" element={<Contact lang = {language}/>}/>
+      <Route path="about" element={<About lang = {language}/>}/>
       {/* Section Residentielle */}
-      <Route path="service-resi" element={<ServicesResi/>}/>
-      <Route path="service-resi/construction" element={<ConstructionResi/>}/>
-      <Route path="service-resi/réparation" element={<ReparationResi/>}/>
-      <Route path="service-resi/vérification" element={<VerificationResi/>}/>
-      <Route path="service-resi/inspection" element={<InspectionResi/>}/>
-      <Route path="service-resi/rénovation" element={<RenovationResi/>}/>
-      <Route path="service-resi/installation" element={<InstallationResi/>}/>
-      <Route path="service-resi/chauffe-eau" element={<ChauffeEauResi/>}/>
-      <Route path="service-resi/tuyauteries" element={<TuyauteriesResi/>}/>
-      <Route path="service-resi/débouchage" element={<DebouchageResi/>}/>
+      <Route path="service-resi" element={<ServicesResi lang = {language}/>}/>
+      <Route path="service-resi/construction" element={<ConstructionResi lang = {language}/>}/>
+      <Route path="service-resi/réparation" element={<ReparationResi lang = {language}/>}/>
+      <Route path="service-resi/vérification" element={<VerificationResi lang = {language}/>}/>
+      <Route path="service-resi/inspection" element={<InspectionResi lang = {language}/>}/>
+      <Route path="service-resi/rénovation" element={<RenovationResi lang = {language}/>}/>
+      <Route path="service-resi/installation" element={<InstallationResi lang = {language}/>}/>
+      <Route path="service-resi/chauffe-eau" element={<ChauffeEauResi lang = {language}/>}/>
+      <Route path="service-resi/tuyauteries" element={<TuyauteriesResi lang = {language}/>}/>
+      <Route path="service-resi/débouchage" element={<DebouchageResi lang = {language}/>}/>
       {/* Section Professionel */}
-      <Route path="service-prof/construction" element={<ConstructionProf/>}/>
-      <Route path="service-prof/réparation" element={<ReparationProf/>}/>
-      <Route path="service-prof/vérification" element={<VerificationProf/>}/>
-      <Route path="service-prof/inspection" element={<InspectionProf/>}/>
-      <Route path="service-prof/rénovation" element={<RenovationProf/>}/>
-      <Route path="service-prof/installation" element={<InstallationProf/>}/>
-      <Route path="service-prof/chauffe-eau" element={<ChauffeEauProf/>}/>
-      <Route path="service-prof/debouchage" element={<DebouchageProf/>}/>
-      <Route path="service-prof/tuyauteries" element={<TuyauterieProf/>}/>
-      <Route path="service-comm" element={<ServiceComm/>}/>
-      <Route path="service-indu" element={<ServicesIndu/>}/>
+      <Route path="service-prof/construction" element={<ConstructionProf lang = {language}/>}/>
+      <Route path="service-prof/réparation" element={<ReparationProf lang = {language}/>}/>
+      <Route path="service-prof/vérification" element={<VerificationProf lang = {language}/>}/>
+      <Route path="service-prof/inspection" element={<InspectionProf lang = {language}/>}/>
+      <Route path="service-prof/rénovation" element={<RenovationProf lang = {language}/>}/>
+      <Route path="service-prof/installation" element={<InstallationProf lang = {language}/>}/>
+      <Route path="service-prof/chauffe-eau" element={<ChauffeEauProf lang = {language}/>}/>
+      <Route path="service-prof/debouchage" element={<DebouchageProf lang = {language}/>}/>
+      <Route path="service-prof/tuyauteries" element={<TuyauterieProf lang = {language}/>}/>
+      <Route path="service-comm" element={<ServiceComm lang = {language}/>}/>
+      <Route path="service-indu" element={<ServicesIndu lang = {language}/>}/>
     </Route>
   </>
   ))

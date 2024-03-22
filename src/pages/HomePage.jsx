@@ -13,7 +13,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
 
 
-function HomePage() {
+function HomePage(props) {
 
   return (
     <div className="w-full h-full max-w-[1000px] m-auto text-black overflow-y-scroll no-scrollbar">
@@ -28,27 +28,27 @@ function HomePage() {
       >
         <div className="w-full h-full p-6">
           <div className="md:w-[55%] md:text-white lg:my-[45px]">
-            <h1 className="text-white text-center text-3xl md:text-xl font-semibold mt-3 mb-14 md:mb-5">Plombiers Certifiés à Votre Service</h1>
-            <p className="text-md text-center md:text-sm">Notre équipe de plombiers certifiés intervient chez vous, dans vos commerces et dans vos installations industrielles. Réparations, installations, conseils : nous sommes là pour vous offrir des solutions fiables et durables. Faites confiance à notre expertise ! </p>
+            <h1 className="text-white text-center text-3xl md:text-xl font-semibold mt-3 mb-14 md:mb-5">{props.lang ? "Plombiers Certifiés à Votre Service" : "Certified Plumbers at Your Service!"}</h1>
+            <p className="text-md text-center md:text-sm">{props.lang ? "Notre équipe de plombiers certifiés intervient chez vous, dans vos commerces et dans vos installations industrielles. Réparations, installations, conseils : nous sommes là pour vous offrir des solutions fiables et durables. Faites confiance à notre expertise !" : "Our team of accredited plumbers is ready to serve you at your residence, your commercial establishments, and your industrial facilities. Whether it’s repairs, installations, or professional advice, we are committed to providing you with reliable and long-lasting solutions. Place your trust in our proven expertise!"}</p>
           
             <div className="w-full h-[100px] md:h-[80px] flex justify-around items-center text-white lg:mt-8 lg:px-10">
               <Link 
               to="contact"
               className="w-[160px] text-center p-3 md:p-2 lg:p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
               >
-                Contactez-Nous
+                {props.lang ? "Contactez-Nous" : "Contact Us"}
               </Link>
               <Link 
               to="/services"
               className="w-[160px] text-center p-3 md:p-2 lg:p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
               >
-                Nos Services
+                 {props.lang ? "Nos Services" : "Our Services"}
               </Link>
             </div>
           </div>
           
           <div className="p-6 w-full h-[200px]">
-            <h1 className="text-2xl font-medium mb-6">Nous Servons</h1>
+            <h1 className="text-2xl font-medium mb-6">{props.lang ? "Nous Servons" : "We Serve"}</h1>
             <div className="w-full flex items-center justify-around">
               <div className='flex flex-col justify-between items-center hover:scale-105 hover:cursor-pointer'>
                 <Link
@@ -56,7 +56,7 @@ function HomePage() {
                 >
                   <img className="w-28 mb-1"src={home} alt="home" />
                 </Link>
-                <p className='underline text-sm underline-offset-2'>Residentiel</p>
+                <p className='underline text-sm underline-offset-2'>{props.lang?"Residentiel":"Residential"}</p>
               </div>
               <div className='flex flex-col justify-between items-center hover:scale-105 hover:cursor-pointer'>
               <Link
@@ -72,7 +72,7 @@ function HomePage() {
               >
                 <img className="w-[92px] mb-1"src={industrial} alt="industrial" />
               </Link>
-              <p className='underline text-sm underline-offset-2'>Industrial</p>
+              <p className='underline text-sm underline-offset-2'>{props.lang?"Industriel":"Industrial"}</p>
               </div>
             </div>
            
@@ -80,7 +80,7 @@ function HomePage() {
 
           {/* Why work with us? */}
           <div className="py-6 w-full h-[200px] md:h-46 justify-center items-center md:justify-around md:flex-row md:px-12 bg-[#f4f8fa]">
-            <h1 className="text-l sm:text-2xl font-medium w-full text-center mb-7">Pourquoi Travailler avec Nous?</h1>
+            <h1 className="text-l sm:text-2xl font-medium w-full text-center mb-7">{props.lang?"Pourquoi Travailler avec Nous?" : "Why Work with Us?"}</h1>
             <div className="flex justify-around">
               
               <div className="flex flex-col items-center w-48 justify-between">
@@ -88,7 +88,7 @@ function HomePage() {
                 size={48}
                 className="text-[#295880] mb-5 hover:scale-105 hover:cursor-pointer"
                 />
-                <p className="text-center text-xs sm:text-sm w-full">Plombiers Locaux</p>
+                <p className="text-center text-xs sm:text-sm w-full">{props.lang?"Plombiers Locaux": "Local Plumbers"}</p>
               </div>
 
               <div className="flex flex-col items-center w-48 justify-between">
@@ -97,7 +97,7 @@ function HomePage() {
                 alt="cmmtq" 
                 className="w-36 mt-2 sm:mt-0 hover:scale-105 hover:cursor-pointer"
                 />
-                <p className="text-center text-xs sm:text-sm w-full">Certifié et Assuré</p>
+                <p className="text-center text-xs sm:text-sm w-full">{props.lang?"Certifié et Assuré": "Certified & Insured"}</p>
               </div>
 
               <div className="flex flex-col items-center justify-around w-48">
@@ -105,7 +105,7 @@ function HomePage() {
                 size={45}
                 className="text-[#295880] mb-5 hover:scale-105 hover:cursor-pointer"
                 />
-                <p className="text-center text-xs sm:text-sm w-full">Service 24/7</p>
+                <p className="text-center text-xs sm:text-sm w-full">{props.lang?"Service 24/7":"24/7 Service"}</p>
               </div>
 
             </div>
@@ -114,7 +114,7 @@ function HomePage() {
           </div>
           {/* Accepted Payment Section */}
           <div className="p-6 w-full h-[200px]">
-            <h1 className="text-2xl font-medium mb-6">Nous Acceptons</h1>
+            <h1 className="text-2xl font-medium mb-6">{props.lang?"Nous Acceptons":"We Accept"}</h1>
             <div className="flex justify-around w-full items-center">
               <img src={cash} 
                 className="h-10 md:h-[50px] hover:scale-105 hover:cursor-pointer"

@@ -1,7 +1,7 @@
 import React from 'react'
 import cmmtq from "../assets/CMMTQ-white.png"
 
-function Footer() {
+function Footer(props) {
   return (
     <div className="h-20 w-screen bg-[#126DAF] flex justify-center items-center flex-col text-white no-scrollbar overflow-y-scroll">
       <p className="flex items-center font-medium text-xs md:text-base">
@@ -13,7 +13,7 @@ function Footer() {
                 />
             </p>
       <p className=" font-medium text-xs md:text-base">
-        &#169; {new Date().getFullYear()} PLOMBERIE ADICAN
+        &#169; {new Date().getFullYear()} {props.lang ? "PLOMBERIE ADICAN" : "ADICAN PLUMBING"}
 
       </p>
     </div>

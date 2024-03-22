@@ -3,49 +3,48 @@ import plumbing from "../assets/plumbing.jpg"
 import { FaCheck } from "react-icons/fa"
 import home from "../assets/residentiel.png"
 import industrial from "../assets/industrielle.png"
-import commercial from "../assets/commercial.png"
 
 
-function Services() {
+function Services(props) {
   const services = [
     {
-      title: "Residentiel",
+      title: props.lang ? "Residentiel" : "Residential",
       photo: home,
       service: [
-        "Réparation",
-        "Chauffage d'eau",
+        props.lang?"Réparation" : "Repair",
+        props.lang?"Chauffage d'eau" : "Water heating",
         "Construction",
-        "Vérification",
-        "Rénovation ",
-        "Tuyauteries", 
+        props.lang?"Vérification" : "Verification",
+        props.lang?"Rénovation" : "Renovation",
+        props.lang?"Tuyauteries" : "Pipes", 
         "Inspection", 
         "Installation",
-        "Dégel de tuyaux",
-        "Débouchage",
-        "Évaluation",
-        "Fuite d’eau",
-        "Service Frigo",
-        "Service Robinet",
-        "Pompe Submersible",
-        "et Plus!"
+        props.lang?"Dégel de Tuyaux" : "Pipes Thawing ",
+        props.lang?"Débouchage" : "Unclogging",
+        props.lang?"Évaluation" : "Assessment",
+        props.lang?"Fuite d’eau" : "Water Leak",
+        props.lang?"Service Frigo" : "Fridge Service",
+        props.lang?"Service Robinet" : "Faucet Service",
+        props.lang?"Pompe Submersible" : "Submersible pump",
+        props.lang?"et Plus!" : "and More!"
       ]
     },
     {
-      title: "Professionnel",
+      title: props.lang?"Professionnel":"Professional",
       photo: industrial,
       service: [
-        "Trappe à graisse",
-        "Drains de Toit",
-        "Salle de Bain",
-        "Urinoir", 
-        "Abreuvoir", 
-        "Robinet de Chasse",
-        "Ligne d’air, eau refroidie",
-        "Nettoyage par Pression",
-        "Appareils Sanitaires",
-        "Amorceur de siphon",
-        "Les Services Residentiels",
-        "et Plus!"
+        props.lang?"Trappe à graisse" : "Grease Trap",
+        props.lang?"Drains de Toit" : "Roof Drains",
+        props.lang?"Salle de Bain" : "Bathroom",
+        props.lang?"Urinoir" : "Urinal", 
+        props.lang?"Abreuvoir" : "Water Drinker", 
+        props.lang?"Robinet de Chasse" : "Flush Valve",
+        props.lang?"Ligne d’air, eau refroidie" : "Air Line, Cooled Water",
+        props.lang?"Nettoyage par Pression" : "Pressure Cleaning",
+        props.lang?"Appareils Sanitaires" : "Sanitary devices",
+        props.lang?"Amorceur de Siphon" : "Siphon Primer",
+        props.lang?"Les Services Residentiels" : "Residential Services",
+        props.lang?"et Plus!" : "and More!"
       ]
     },
   ]

@@ -8,7 +8,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 
 
-function Header() {
+function Header(props) {
   const [menuBtn, setMenuBtn] = React.useState(false)
   const [hoveredItem, setHoveredItem] = React.useState(null);
   const [submenu, setSubmenu] = React.useState(null);
@@ -19,61 +19,61 @@ function Header() {
   const list = [
     {
       id:1,
-      name: "À Propos",
+      name: props.lang ? "À Propos" : "About Us",
       location: "/about"
     },
     {
       id:2,
-      name: "Résidentiel",
+      name: props.lang ? "Résidentiel" : "Residential",
       submenu : [
         {
           id: 1 ,
-          name: "Construction",
+          name: "Construction" ,
           path: "service-resi/construction"
         },
         {
           id: 2 ,
-          name:"Réparation",
+          name: props.lang ? "Réparation" : "Repair",
           path: "service-resi/réparation"
         }, 
         {
           id: 3 ,
-          name:"Vérification",
+          name: props.lang ? "Vérification" : "Verification" ,
           path: "service-resi/vérification"
         },
         {
           id: 4 ,
-          name:"Inspection",
+          name: "Inspection" ,
           path: "service-resi/inspection"
         }, 
         {
           id: 5 ,
-          name:"Rénovation",
+          name: props.lang ? "Rénovation" : "Renovation" ,
           path: "service-resi/rénovation"
         },
         {
           id: 6 ,
-          name:"Installation",
+          name: "Installation" ,
           path: "service-resi/installation"
         },
         {
           id: 7 ,
-          name:"Chauffe-Eau",
+          name: props.lang ? "Chauffe-Eau" : "WaterHeater",
           path: "service-resi/chauffe-eau"
         },
         {
           id: 8 ,
-          name:"Tuyauteries",
+          name: props.lang ? "Tuyauteries" : "Pipes",
           path: "service-resi/tuyauteries"
         }, 
         {
           id: 9 ,
-          name:"Débouchage",
+          name: props.lang ? "Débouchage" : "Unclogging",
           path: "service-resi/débouchage"
         },
         {
           id: 10 ,
-          name:"Nos Services",
+          name: props.lang ? "Nos Services" : "Our Services" ,
           path: "/service-resi"
         },
       ]
@@ -90,59 +90,59 @@ function Header() {
         },
         {
           id: 2 ,
-          name:"Réparation",
+          name:  props.lang ? "Réparation" : "Repair",
           path: "/service-prof/réparation"
         }, 
         {
           id: 3 ,
-          name:"Vérification",
+          name: props.lang ? "Vérification" : "Verification",
           path: "/service-prof/vérification"
         },
         {
           id: 4 ,
-          name:"Inspection",
+          name: "Inspection",
           path: "/service-prof/inspection"
         }, 
         {
           id: 5 ,
-          name:"Rénovation",
+          name: props.lang ? "Rénovation" : "Renovation",
           path: "/service-prof/rénovation"
         },
         {
           id: 6 ,
-          name:"Installation",
+          name: "Installation",
           path: "/service-prof/installation"
         },
         {
           id: 7 ,
-          name:"Chauffe-Eau",
+          name: props.lang ? "Chauffe-Eau" : "WaterHeater",
           path: "service-prof/chauffe-eau"
         },
         {
           id: 8 ,
-          name:"Tuyauteries",
+          name: props.lang ? "Tuyauteries" : "Pipes",
           path: "/service-prof/tuyauteries"
         }, 
         {
           id: 9  ,
-          name:"Débouchage",
+          name: props.lang ? "Débouchage" : "Unclogging",
           path: "/service-prof/debouchage"
         },
         {
           id: 10  ,
-          name:"Commercial",
+          name: "Commercial",
           path: "/service-comm"
         },
         {
           id: 11  ,
-          name:"Industrielle",
+          name: props.lang ? "Industrielle" : "Industrial",
           path: "/service-indu"
         },
       ]
     },
     {
       id:4,
-      name: "Nous-Contactez",
+      name: props.lang ? "Nous-Contactez" : "Contact Us",
       location: "/contact"
     }
   ]
@@ -158,13 +158,20 @@ function Header() {
       <div className="w-screen h-12 bg-[#126DAF] flex items-center justify-around text-white ">
         <div className="flex items-center text-xs w-full max-w-[1000px] md:text-base justify-between px-3"> 
         <div className="flex">
-          <p className="flex items-center"> <BiPhoneCall size={18}/>&#160;Urgence Plomberie? &#160;24/7 -&#160; <a className="underline" href="tel:5144496331">(514) 449-6331</a></p>
+          <p className="flex items-center"> <BiPhoneCall size={18}/>&#160;
+            {props.lang ? "Urgence Plomberie" : "Plumbing Emergency"}? &#160;24/7 -&#160; 
+            <a 
+              className="underline" 
+              href="tel:5144496331">
+                (514) 449-6331
+            </a>
+          </p>
         </div>
           <button
           className="text-lg font-semibold"
-          onClick={()=>console.log("English was clicked!")}
+          onClick={props.toggle}
           >
-          EN
+          {props.lang ? "EN" : "FR"}
           </button>
         </div>
       </div>
@@ -231,7 +238,7 @@ function Header() {
       
         {
           menuBtn && ( 
-            <ul className="menu-animation flex flex-col text-gray-500 text-xl font-medium items-center absolute w-full bg-white z-9 mt-[125px]">
+            <ul className="menu-animation flex flex-col text-gray-500 text-xl font-medium items-center absolute w-full bg-white bg-opacity-95 z-9 mt-[125px]">
               {
                 list.map((item,index)=> (
                 <div
