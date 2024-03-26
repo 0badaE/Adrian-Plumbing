@@ -11,6 +11,7 @@ import cash from "../assets/cash.png"
 import interac from "../assets/interac.png"
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
+import { BiPhoneCall } from "react-icons/bi";
 
 
 function HomePage(props) {
@@ -29,18 +30,30 @@ function HomePage(props) {
         <div className="w-full h-full p-6">
           <div className="md:w-[55%] md:text-white lg:my-[45px]">
             <h1 className="text-white text-center text-3xl md:text-xl font-semibold mt-3 mb-14 md:mb-5">{props.lang ? "Plombiers Certifiés à Votre Service" : "Certified Plumbers at Your Service!"}</h1>
-            <p className="text-md text-center md:text-sm">{props.lang ? "Notre équipe de plombiers certifiés intervient chez vous, dans vos commerces et dans vos installations industrielles. Réparations, installations, conseils : nous sommes là pour vous offrir des solutions fiables et durables. Faites confiance à notre expertise !" : "Our team of accredited plumbers is ready to serve you at your residence, your commercial establishments, and your industrial facilities. Whether it’s repairs, installations, or professional advice, we are committed to providing you with reliable and long-lasting solutions. Place your trust in our proven expertise!"}</p>
+            <p className="text-md text-center md:text-sm">{props.lang ? "Notre équipe de plombiers certifiés intervient chez vous, dans vos commerces et dans vos installations industrielles. Réparations, installations, conseils : nous sommes là pour vous offrir des solutions fiables et durables. Faites confiance à notre expertise !" : "Our team of accredited plumbers is ready to serve you at your residence, your commercial establishments, and your industrial facilities. Whether it’s repairs, installations, or professional advice, we are committed to providing you with reliable and long-lasting solutions."}</p>
           
             <div className="w-full h-[100px] md:h-[80px] flex justify-around items-center text-white lg:mt-8 lg:px-10">
               <Link 
               to="contact"
-              className="w-[160px] text-center p-3 md:p-2 lg:p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
+              className="hidden sm:inline w-[160px] text-center p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
               >
-                {props.lang ? "Contactez-Nous" : "Contact Us"}
+                {props.lang ? "Contactez-nous" : "Contact Us"}
               </Link>
+              
+              <a 
+                className="sm:hidden flex justify-around w-[160px] text-center p-3 text-md items-center rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
+                href="tel:5144496331"
+                rel="noreferrer"
+              > 
+                <BiPhoneCall
+                  size={20}
+              />
+                {props.lang ? "Appelez-nous" : "Call Us"}
+              </a>
+
               <Link 
               to="/services"
-              className="w-[160px] text-center p-3 md:p-2 lg:p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
+              className="w-[160px] text-center p-3 md:w-36 md:text-sm  rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
               >
                  {props.lang ? "Nos Services" : "Our Services"}
               </Link>

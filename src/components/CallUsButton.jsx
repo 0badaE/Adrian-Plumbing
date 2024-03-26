@@ -4,7 +4,7 @@ import { BiPhoneCall } from "react-icons/bi";
 
 function SocialLinks(){
     return(
-        <div className="hidden lg:flex flex-col top-[68%] right-0 fixed">
+        <div className="hidden sm:flex flex-col top-[60%] right-0 fixed">
             <ul>
                
                 <li 
