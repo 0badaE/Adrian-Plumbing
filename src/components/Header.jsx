@@ -263,12 +263,12 @@ function Header(props) {
                     {
                       item.submenu && item.id === submenu && (
                       <div
-                        className="text-gray-500 flex flex-col w-[130px] justify-around"
+                        className="text-gray-500 flex flex-col w-[130px] justify-around "
                       >
                       {item.submenu.map((subItem) => (
                         <div>
                           <NavLink 
-                          className="flex pl-6 py-3 text-[16.3px] font-medium"
+                          className="flex pl-6 py-3 text-[16.3px] font-medium hover:text-[#40b7e6]"
                           key={subItem.id} 
                           to={`${subItem.path}`}
                           onClick={()=> setMenuBtn(false)}
