@@ -180,7 +180,7 @@ function Header(props) {
         <Link
         to="/"
         >
-          <img src={Logo} alt="logo" className="w-40 max-sm:w-32"/>
+          <img src={Logo} alt="logo" className="w-48 max-sm:w-36"/>
         </Link>
         
         <nav className="w-[600px] max-sm:hidden h-20 flex items-center">
