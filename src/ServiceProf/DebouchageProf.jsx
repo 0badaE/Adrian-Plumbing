@@ -28,7 +28,7 @@ function DebouchageProf(props) {
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
             <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center text-center">
-                {props.lang?"Débouchage Professionnelle" : "Professional Unclogging"}
+                {props.lang?"Débouchage de Type Professionnelle" : "Professional Unclogging"}
             </h1>
           </div>
         </div>
@@ -41,7 +41,7 @@ function DebouchageProf(props) {
                 <br />
                 <li>&#8226; {props.lang?"Interventions de Débouchage d’Urgence 24/7":"24/7 Emergency Unclogging Interventions"}</li>
                 <li>&#8226; {props.lang?"Maintenance des Systèmes d’Évacuation":"Maintenance of Evacuation Systems"}</li>
-                <li>&#8226; {props.lang?"Technologies de Pointe pour le Diagnostic":"Cutting-edge Technologies for Diagnostics"}  </li>
+                <li>&#8226; {props.lang?"Technologies de Pointe pour le Diagnostique":"Cutting-edge Technologies for Diagnostics"}  </li>
                 <li>&#8226; {props.lang?"Solutions Écologiques de Débouchage":"Ecological Unclogging Solutions"}</li>
                 <li>&#8226; {props.lang?"Conseils Professionnels et Suivi":"Professional Advice and Follow-ups"}</li>
                 <li>&#8226; {props.lang?"et Plus!":"and More!"}</li>

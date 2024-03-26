@@ -27,8 +27,8 @@ function ChauffeEau(props) {
          }}
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
-            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center">
-            {props.lang?"Chauffe-Eau Résidentiel" :"Residential Water Heating"}</h1>
+            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center text-center">
+            {props.lang?"Chauffe-Eau de Type Résidentiel" :"Residential Water Heating"}</h1>
           </div>
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">
@@ -39,7 +39,7 @@ function ChauffeEau(props) {
                 <br />
                 <p className='text-2xl font-medium'>{props.lang?"Nos":"Our"} Services</p>
                 <br />
-                <li>&#8226; {props.lang?"Installation de Chauffe-Eau Électriques, à Gaz et Solaire":"Installation of Electric, Gas and Solar Water Heaters"}</li>
+                <li>&#8226; {props.lang?"Installation de Chauffe-Eau":"Installation of Water Heaters"}</li>
                 <li>&#8226; {props.lang?"Utilisation de Caméras d’Inspection":"Use of Inspection Cameras"}</li>
                 <li>&#8226; {props.lang?"Mise à Niveau des Systèmes de Chauffe-Eau":"Upgrading Water Heater Systems"}</li>
                 <li>&#8226; {props.lang?"Inspection de Sécurité du Chauffe-Eau":"Water Heater Safety Inspection"}</li>

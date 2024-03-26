@@ -27,8 +27,8 @@ function ConstructionResi(props) {
          }}
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
-            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center">
-              {props.lang?"Construction Résidentiel":"Residential Construction"}</h1>
+            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center text-center">
+              {props.lang?"Construction de Type Résidentiel":"Residential Construction"}</h1>
           </div>
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">

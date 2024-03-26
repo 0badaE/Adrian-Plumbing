@@ -47,7 +47,7 @@ function About(props) {
 
           <div className="w-full p-6 flex flex-col sm:flex-row justify-around">
             <div className="flex flex-col mb-5 p-2">
-              <h1 className="text-3xl sm:text-4xl font-medium w-full mb-7 text-center sm:text-left">{props.lang?"Notre Guarantee": "Our Guarantee"}</h1>
+              <h1 className="text-3xl sm:text-4xl font-medium w-full mb-7 text-center sm:text-left">{props.lang?"Notre Guarantie": "Our Guarantee"}</h1>
               <ul>
                 {
                   guarantee.map((item,index)=>(

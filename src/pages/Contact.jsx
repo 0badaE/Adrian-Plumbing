@@ -10,7 +10,7 @@ function Contact(props) {
     <div className="text-black w-full max-w-[1000px] m-auto sm:w-full no-scrollbar overflow-y-scroll">
     <div className="flex flex-col px-4 justify-center mx-auto">
          <div className="py-2 mb-5">
-            <p className="text-3xl font-bold inline border-b-4 border-[#4492C6] ">{props.lang?"Contactez-Nous":"Contact Us"}</p>
+            <p className="text-3xl font-bold inline border-b-4 border-[#4492C6] ">{props.lang?"Contactez-nous":"Contact Us"}</p>
             <p className="pt-6 text-black">{props.lang?"Appeler nous au":"Call us at"} <a className="underline font-bold text-[#4fb6ffff]" href="tel:5144496331">(514) 449-6331</a></p>
             <p className="flex mb-6 items-center">
             {props.lang?"Envoyez-nous un message sur":"Send us a Message through"} &#160;

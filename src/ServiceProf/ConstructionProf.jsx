@@ -39,7 +39,7 @@ function ConstructionProf(props) {
                 <br />
                 <h1 className='text-2xl font-medium'>{props.lang?"Nos":"Our"} Services</h1>
                 <br />
-                <li>&#8226; {props.lang?"Conception et Installation de Plomberie Industriel":"Design and Installation of Industrial Plumbing"}</li>
+                <li>&#8226; {props.lang?"Conception et installation de plomberie industrielle":"Design and Installation of Industrial Plumbing"}</li>
                 <li>&#8226; {props.lang?"Plomberie pour Constructions Commerciales":"Plumbing for Commercial Buildings"}</li>
                 <li>&#8226; {props.lang?"Intégration de Technologies Avancées":"Integration of Advanced Technologies"}</li>
                 <li>&#8226; {props.lang?"Respect des Normes de Sécurité et Environnementales":"Compliance with Safety and Environmental Standards"}</li>

@@ -43,7 +43,7 @@ function TuyauterieProf(props) {
                 <li>&#8226; {props.lang?"Maintenance Industrielle et Commerciale":"Industrial and Commercial Maintenance"}</li>
                 <li>&#8226; {props.lang?"Réparation de Tuyauterie Haute Résistance":"Repair of High Resistance Piping"}</li>
                 <li>&#8226; {props.lang?"Mises à Niveau et Modernisation":"Upgrades and Modernization"}</li>
-                <li>&#8226; {props.lang?"Inspections et Diagnostics Avancés":"Advanced Inspections and Diagnostics"}</li>
+                <li>&#8226; {props.lang?"Inspections et Diagnostiques Avancés":"Advanced Inspections and Diagnostic"}</li>
                 <li>&#8226; {props.lang?"et Plus!":"and More!"}</li>
           </ul>
         </p>

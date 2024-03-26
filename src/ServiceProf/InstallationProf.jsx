@@ -29,13 +29,13 @@ function RenovationProf(props) {
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
             <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center text-center">
-                {props.lang?"Installation Professionnelle":"Professional Installation"}
+                {props.lang?"Installation de Type Professionnelle":"Professional Installation"}
             </h1>
           </div>
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">
           <p className="p-2 w-full lg:w-[50%] mb-6">
-         {props.lang?"Plomberie Adican est le spécialiste de l’Installation Professionnelle pour les espaces commerciaux et industriels. Que ce soit pour équiper une cuisine de restaurant avec des installations plomberie de pointe ou pour installer des sanitaires fonctionnels et esthétiques, notre équipe est prête à relever tous les défis. Nous offrons des services complets, de la conception à l’installation, en veillant à ce que chaque projet soit réalisé avec le plus grand soin et selon les spécifications de nos clients.":"Adican Plumbing is the specialist in Professional Installation for commercial and industrial spaces. Whether it’s equipping a restaurant kitchen with state-of-the-art plumbing installations or installing functional and aesthetic sanitary facilities, our team is ready to meet all challenges. We offer comprehensive services, from design to installation, ensuring that each project is carried out with the utmost care and according to our clients’ specifications."}            
+         {props.lang?"Plomberie Adican est le spécialiste de l’Installation Professionnelle pour les espaces commerciaux et industriels. Que ce soit pour équiper une cuisine de restaurant avec des installations de plomberie de pointe ou pour installer des sanitaires fonctionnels et esthétiques, notre équipe est prête à relever tous les défis. Nous offrons des services complets, de la conception à l’installation, en veillant à ce que chaque projet soit réalisé avec le plus grand soin et selon les spécifications de nos clients.":"Adican Plumbing is the specialist in Professional Installation for commercial and industrial spaces. Whether it’s equipping a restaurant kitchen with state-of-the-art plumbing installations or installing functional and aesthetic sanitary facilities, our team is ready to meet all challenges. We offer comprehensive services, from design to installation, ensuring that each project is carried out with the utmost care and according to our clients’ specifications."}            
           
               <ul>
                 <br />

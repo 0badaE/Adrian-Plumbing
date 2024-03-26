@@ -44,7 +44,7 @@ function ConstructionProf(props) {
                 <li>&#8226; {props.lang?"Analyses Complètes avec Rapports Détaillés":"Comprehensive Analytics with Detailed Reports"}</li>
                 <li>&#8226; {props.lang?"Utilisation de Caméras d’Inspection Haute Définition":"Use of High Definition Inspection Cameras"}</li>
                 <li>&#8226; {props.lang?"Évaluations de Conformité aux Normes":"Standards Compliance Assessments"}</li>
-                <li>&#8226; {props.lang?"Diagnostics Préventifs":"Preventive Diagnostics"} </li>
+                <li>&#8226; {props.lang?"Diagnostique Préventifs":"Preventive Diagnostics"} </li>
                 <li>&#8226; {props.lang?"Conseils Techniques et Recommandations":"Technical Advice and Recommendations"} </li>
                 <li>&#8226; {props.lang?"et Plus!":"and More!"}</li>
             </ul>

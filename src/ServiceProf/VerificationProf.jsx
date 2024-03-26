@@ -40,9 +40,9 @@ function ConstructionProf(props) {
                 <p className='text-2xl font-medium'>{props.lang?"Nos":"Our"} Services</p>
                 <br />
                 <li>&#8226; {props.lang?"Inspections Réglementaires et Conformité":"Regulatory Inspections and Compliance"}</li>
-                <li>&#8226; {props.lang?"Utilisation de Technologies de Diagnostic Avancées":"Use of Advanced Diagnostic Technologies"}</li>
+                <li>&#8226; {props.lang?"Utilisation de Technologies de Diagnostique Avancées":"Use of Advanced Diagnostique Technologies"}</li>
                 <li>&#8226; {props.lang?"Rapports Détaillés pour Assurance":"Detailed Reports for Insurance"}</li>
-                <li>&#8226; {props.lang?"Évaluations Préventives et Diagnostics":"Preventive Assessments and Diagnostics"}</li>
+                <li>&#8226; {props.lang?"Évaluations Préventives et Diagnostiques":"Preventive Assessments and Diagnostics"}</li>
                 <li>&#8226; {props.lang?"Conseils d’Experts sur l’Entretien":"Expert Tips on Maintenance"}</li>
                 <li>&#8226; {props.lang?"et Plus!":"and More!"}</li>
             </ul>

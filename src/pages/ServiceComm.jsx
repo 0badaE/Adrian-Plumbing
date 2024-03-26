@@ -18,7 +18,6 @@ function ServicesResi(props) {
         props.lang ? "Nettoyage par Pression": "Pressure Cleaning",
         props.lang ? "Appareils Sanitaires": "Sanitary devices",
         props.lang ? "Amorceur de Siphon": "Siphon Primer",
-        props.lang ? "Les Services Residentiels": "Residential Services" ,
         props.lang ? "et Plus!":"and More!" 
       ]
   return (

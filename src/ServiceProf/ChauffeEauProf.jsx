@@ -28,13 +28,13 @@ function ConstructionProf(props) {
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
             <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center text-center">
-              {props.lang?"Chauffe-Eau Professionnelle":"Professional Water Heating"}
+              {props.lang?"Chauffe-Eau de Type Professionnelle":"Professional Water Heating"}
             </h1>
           </div>
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">
           <p className="p-2 w-full lg:w-[50%] mb-6">
-          {props.lang?"Plomberie Adican excelle dans les services de Chauffe-Eau Professionnel, offrant une gamme complète de solutions pour les secteurs commerciaux et industriels. De la maintenance préventive à l’installation de nouveaux équipements, notre équipe assure un service impeccable pour garantir la performance et la fiabilité de vos systèmes de chauffe-eau. Nous nous engageons à fournir une eau chaude constante, répondant aux besoins exigeants de votre activité professionnelle.":"Adican Plumbing excels in Professional Water Heater services, offering a comprehensive range of solutions for commercial and industrial sectors. From preventive maintenance to the installation of new equipment, our team provides impeccable service to ensure the performance and reliability of your water heating systems. We are committed to providing a constant supply of hot water, meeting the demanding needs of your professional activity."}            
+          {props.lang?"Plomberie Adican excelle dans les services de Chauffe-Eau professionnel, offrant une gamme complète de solutions pour les secteurs commerciaux et industriels. De la maintenance préventive à l’installation de nouveaux équipements, notre équipe assure un service impeccable pour garantir la performance et la fiabilité de vos systèmes de chauffe-eau. Nous nous engageons à fournir une eau chaude constante, répondant aux besoins exigeants de votre activité professionnelle.":"Adican Plumbing excels in Professional Water Heater services, offering a comprehensive range of solutions for commercial and industrial sectors. From preventive maintenance to the installation of new equipment, our team provides impeccable service to ensure the performance and reliability of your water heating systems. We are committed to providing a constant supply of hot water, meeting the demanding needs of your professional activity."}            
             <ul>
                 <br />
                 <p className='text-2xl font-medium'>{props.lang?"Nos":"Our"} Services</p>

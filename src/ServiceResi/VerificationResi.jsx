@@ -27,8 +27,8 @@ function VerificationResi(props) {
          }}
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
-            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center">
-            {props.lang?"Vérification Résidentiel":"Residential Verification"}</h1>
+            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center text-center">
+            {props.lang?"Vérification de Type Résidentiel":"Residential Verification"}</h1>
           </div>
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">
@@ -38,7 +38,7 @@ function VerificationResi(props) {
                 <br />
                 <h1 className='text-2xl font-medium'>{props.lang?"Nos":"Our"} Services</h1>
                 <br />
-                <li>&#8226; {props.lang?"Inspection et Diagnostic de la Tuyauterie":"Piping Inspection and Diagnosis"}</li>
+                <li>&#8226; {props.lang?"Inspection et Diagnostique de la Tuyauterie":"Piping Inspection and Diagnosis"}</li>
                 <li>&#8226; {props.lang?"Détection et Réparation de Fuites":"Leak Detection and Repair"} </li>
                 <li>&#8226; {props.lang?"Évaluation de la Pression de l’Eau":"Water Pressure Assessment"}</li>
                 <li>&#8226; {props.lang?"Vérification de l’Efficacité des Chauffe-Eau":"Checking the Efficiency of Water Heaters"}</li>

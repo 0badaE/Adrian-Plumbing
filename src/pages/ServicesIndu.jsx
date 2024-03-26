@@ -21,7 +21,6 @@ function ServicesResi(props) {
         props.lang ? "Nettoyage par Pression": "Pressure Cleaning",
         props.lang ? "Appareils Sanitaires": "Sanitary devices",
         props.lang ? "Amorceur de Siphon": "Siphon Primer",
-        props.lang ? "Les Services Residentiels": "Residential Services",
         props.lang ? "et Plus!":"and More!"
       ]
   return (
@@ -36,12 +35,12 @@ function ServicesResi(props) {
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
             <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center">
-             {props.lang?"Service Industrielle":"Industrial Service"}</h1>
+             {props.lang?"Services Industriels":"Industrial Service"}</h1>
           </div>
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">
             <p className="p-2 w-full lg:w-[50%] mb-6">
-                {props.lang?"Plomberie Adican est votre allié stratégique pour répondre aux exigences élevées de la plomberie industrielle. Disponible 24/7, notre équipe d’experts se tient prête à intervenir dans vos immeubles, centres commerciaux, usines, et autres infrastructures industrielles. Nous offrons des solutions robustes et adaptées aux besoins spécifiques des environnements industriels, garantissant ainsi la sécurité, l’efficacité et la conformité de vos installations. Notre engagement est de soutenir la continuité de vos opérations avec un service fiable et des interventions précises, contribuant au succès de votre entreprise." : "Adican Plumbing is your strategic ally in meeting the high demands of industrial plumbing. Available 24/7, our team of experts is ready to intervene in your buildings, shopping centers, factories, and other industrial infrastructures. We offer robust solutions tailored to the specific needs of industrial environments, thus ensuring the safety, efficiency, and compliance of your facilities. Our commitment is to support the continuity of your operations with reliable service and precise interventions, contributing to the success of your business."}
+                {props.lang?"Plomberie Adican est votre allié stratégique pour répondre aux exigences élevées de la plomberie industrielle. Disponible 24/7, notre équipe d’experts se tient prête à intervenir dans vos immeubles, centres commerciaux, usines et autres infrastructures industrielles. Nous offrons des solutions robustes et adaptées aux besoins spécifiques des environnements industriels, garantissant ainsi la sécurité, l’efficacité et la conformité de vos installations. Notre engagement est de soutenir la continuité de vos opérations avec un service fiable et des interventions précises, contribuant au succès de votre entreprise." : "Adican Plumbing is your strategic ally in meeting the high demands of industrial plumbing. Available 24/7, our team of experts is ready to intervene in your buildings, shopping centers, factories, and other industrial infrastructures. We offer robust solutions tailored to the specific needs of industrial environments, thus ensuring the safety, efficiency, and compliance of your facilities. Our commitment is to support the continuity of your operations with reliable service and precise interventions, contributing to the success of your business."}
             </p>
             <img 
             src={industrialPlumb} 

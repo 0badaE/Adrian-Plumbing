@@ -27,13 +27,13 @@ function RenovationResi(props) {
          }}
         >
           <div className="w-full h-28 sm:h-48 lg:h-64 flex justify-center ">
-            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center">
-            {props.lang?"Rénovation Résidentiel":"Residential Renovation"}</h1>
+            <h1 className="text-white text-3xl md:text-5xl font-semibold h-full flex items-center text-center">
+            {props.lang?"Rénovation  de Type Résidentiel":"Residential Renovation"}</h1>
           </div>
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">
           <p className="p-2 w-full lg:w-[50%] mb-6">
-          {props.lang?"La rénovation de votre plomberie est une étape cruciale pour garantir confort et sécurité dans votre foyer. Plomberie Adican est votre partenaire de confiance pour transformer et moderniser votre installation. Nos spécialistes en rénovation utilisent des matériaux de qualité et des techniques éprouvées pour revitaliser votre plomberie, tout en respectant les normes les plus strictes de l’industrie.":"Renovating your plumbing is a crucial step in ensuring comfort and safety in your home. Adican Plumbing is your trusted partner for transforming and modernizing your setup. Our renovation specialists use high-quality materials and proven techniques to rejuvenate your plumbing, all while adhering to the strictest industry standards."}            
+          {props.lang?"La rénovation de votre plomberie est une étape cruciale pour garantir le confort et la sécurité dans votre foyer. Plomberie Adican est votre partenaire de confiance pour transformer et moderniser votre installation. Nos spécialistes en rénovation utilisent des matériaux de qualité et des techniques éprouvées pour revitaliser votre plomberie, tout en respectant les normes les plus strictes de l’industrie.":"Renovating your plumbing is a crucial step in ensuring comfort and safety in your home. Adican Plumbing is your trusted partner for transforming and modernizing your setup. Our renovation specialists use high-quality materials and proven techniques to rejuvenate your plumbing, all while adhering to the strictest industry standards."}            
           
             <ul>
                 <br />

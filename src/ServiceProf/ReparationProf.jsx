@@ -34,12 +34,12 @@ function ConstructionProf(props) {
         </div>
         <div className="p-2 mb-5 flex flex-col lg:flex-row justify-around items-center">
           <p className="p-2 w-full lg:w-[50%] mb-6">
-          {props.lang?"La réparation professionnelle requiert une expertise et une précision sans faille, surtout dans les milieux commerciaux et industriels. Plomberie Adican offre un service de réparation haut de gamme, assurant la remise en état rapide et efficace de vos installations plomberie. Nos techniciens qualifiés sont équipés pour gérer tout défi, garantissant ainsi la continuité de vos opérations avec un minimum d’interruption.":"Professional repair requires flawless expertise and precision, especially in commercial and industrial environments. Adican Plumbing offers a high-end repair service, ensuring the quick and efficient restoration of your plumbing installations. Our qualified technicians are equipped to handle any challenge, thus ensuring the continuity of your operations with minimal interruption."}          
+          {props.lang?"La réparation professionnelle requiert une expertise et une précision sans faille, surtout dans les milieux commerciaux et industriels. Plomberie Adican offre un service de réparation haut de gamme, assurant la remise en état rapide et efficace de vos installations de plomberie. Nos techniciens qualifiés sont équipés pour gérer tout défi, garantissant ainsi la continuité de vos opérations avec un minimum d’interruption.":"Professional repair requires flawless expertise and precision, especially in commercial and industrial environments. Adican Plumbing offers a high-end repair service, ensuring the quick and efficient restoration of your plumbing installations. Our qualified technicians are equipped to handle any challenge, thus ensuring the continuity of your operations with minimal interruption."}          
             <ul>
                 <br />
                 <h1 className='text-2xl font-medium'>{props.lang?"Nos":"Our"} Services</h1>
                 <br />
-                <li>&#8226; {props.lang?"Diagnostic et Réparation d’Urgence":"Emergency Diagnosis and Repair"}</li>
+                <li>&#8226; {props.lang?"Diagnostique et Réparation d’Urgence":"Emergency Diagnosis and Repair"}</li>
                 <li>&#8226; {props.lang?"Maintenance de Systèmes de Plomberie Commerciaux":"Maintenance of Commercial Plumbing Systems"}</li>
                 <li>&#8226; {props.lang?"Mise à Jour des Installations Obsolètes":"Updating Obsolete Installations"}</li>
                 <li>&#8226; {props.lang?"Réparation de Tuyauterie Industrielle":"Industrial Piping Repair"}</li>
