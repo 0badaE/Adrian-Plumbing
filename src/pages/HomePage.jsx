@@ -41,13 +41,14 @@ function HomePage(props) {
               </Link>
               
               <a 
-                className="sm:hidden flex justify-around w-[160px] text-center p-3 text-md items-center rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
+                className="sm:hidden flex justify-center w-[160px] text-center p-3 text-md items-center rounded-md bg-[#4fb6ffff] hover:bg-[#4492C6] duration-300"
                 href="tel:5144496331"
                 rel="noreferrer"
               > 
                 <BiPhoneCall
                   size={20}
               />
+                &#160;
                 {props.lang ? "Appelez-nous" : "Call Us"}
               </a>
 
